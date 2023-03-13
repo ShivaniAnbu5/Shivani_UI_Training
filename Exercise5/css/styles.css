@@ -5,7 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/**************************************************** Styles for header starts here ****************************************************/
+/*********************** Styles for header starts here ***********************/
 header{
     background-color: rgb(45, 94, 144);
 }
@@ -17,20 +17,19 @@ header h2{
     font-size: 21px;
     font-weight: 500;
 }
-/**************************************************** Styles for header ends here ****************************************************/
+/*********************** Styles for header ends here ***********************/
 
-/************************************************ Styles for main content starts here ************************************************/
+/******************* Styles for main content starts here *******************/
 main{
     width: 83.5%;
     margin: 2.1% 8.25% 84px;
     /* border: 1px solid rgb(0, 129, 49); */
 }
 
-/************************************************** Styles for section starts here **************************************************/
+/********************* Styles for section starts here *********************/
 #section1{
     float: left;   
     width: 61%;
-    margin-right: 1.6%;
     /* border: 1px solid rgb(116, 0, 129); */
 }
 
