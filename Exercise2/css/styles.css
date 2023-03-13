@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto+Slab:wght@100;300;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 *{
     margin: 0;
+}
+
+body{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -11,7 +10,7 @@ img{
     max-width: 100%;
 }
 
-/****************************** Header styles starts here ******************************/
+/****************************** STYLES FOR HEADER STARTS HERE ******************************/
 header{
     background-color: rgb(61,22, 60);
     padding: 50px;
@@ -21,25 +20,24 @@ header h2{
     text-align: center;
     color: white;
     font-size: 44px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 div img{
     width: 100%;
 }
 
-/******************************* Section styles starts here *****************************/
+/******************************* STYLES FOR SECTION STARTS HERE *****************************/
 section{
-    width: 87%;
-    margin: 5% 6.5% 0;
-    /* border: 1px solid rgb(68, 0, 255); */
+    width: 89%;
+    margin: 5% 5% 0 6%;
 }
 
 section div{
-    width: 32%;
+    width: 31%;
     display: inline-block;
     margin-bottom: 80px;
-    /* border: 1px solid pink; */
+    margin-right:0.9%;
+    margin-left: 0.9%;
 }
 
 section div h2{ 
@@ -50,25 +48,17 @@ section div h2{
 }
 
 section div p{ 
-    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
     padding-right: 10px;
     margin: 25px 0;
     color: #3e3e3e;
     line-height: 24px;
-    letter-spacing: 0.5px;
-    /* border: 3px solid red; */
-    
+    letter-spacing: 0.5px; 
 }
 
-/******************************* style for center card *******************************/
-.space-div{
-    margin: 0% 1.73%;
-}
-
-/******************************* style for button in card *******************************/
-button{
+/******************************* STYLES FOR READ MORE BUTTON STARTS HERE *******************************/
+.read-more-button{
     background-color: rgb(112, 32, 83);
     color: white;
     padding: 14px 30px;
@@ -77,9 +67,10 @@ button{
     font-weight: 300;
     cursor: pointer;
 }
-/***************************** style for button ends here *******************************/
+/***************************** STYLES FOR READ MORE BUTTON ENDS HERE *******************************/
 
-#many-wonders{
+/******************************* STYLES FOR MANY WONDERS STARTS HERE *******************************/
+.many-wonders{
     margin: 41px 0;
     font-size: 70px;
     font-weight: 300;
@@ -87,23 +78,21 @@ button{
     text-align: center;
 }
 
-/******************************* styles for last section*******************************/
-#last-section{
+.many-wonders-section{
     width: 74%;
     margin: 0 13% 5%;
     color: #3e3e3e;
     line-height: 46px;
     letter-spacing: 0.8px;
     text-align: justify;
-    font-family: 'IBM Plex Sans', sans-serif;
     font-size: 27px;
     font-weight: 300;
-    /* border: 2px solid rgb(16, 133, 51); */
 }
 
-/***************************** styles for footer starts here *****************************/
+/***************************** STYLES FOR FOOTER STARTS HERE *****************************/
 footer{
     background-color: rgb(112, 32, 83);
+    color: white;
 }
 
 footer div{
@@ -111,14 +100,11 @@ footer div{
     margin: 0 6.5%;
     padding: 32px 0;
 }
-footer div p,#copyright{
-    color: white;
-    
-}
-footer div h2{
-    font-family: 'IBM Plex Sans', sans-serif;
+
+footer div .copyright{
     font-weight: 700;
 }
+
 footer div p{
     font-size: 18px;
     font-weight: 300;
