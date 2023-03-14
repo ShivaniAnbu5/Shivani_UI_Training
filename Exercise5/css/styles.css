@@ -71,7 +71,7 @@ section article p{
 }
 
 /************************************ TO MAKE THE PAGE RESPONSIVE ************************************/
-@media (max-width:800px){
+@media (max-width:770px){
     .section1,.section2{
         width:100%;
     }
