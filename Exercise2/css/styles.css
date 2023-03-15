@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+/****************************** STYLES FOR HEADER STARTS HERE ******************************/
+header{
+    background-color: rgb(61,22, 60);
+    padding: 50px;
+}
+
+header h2{
+    text-align: center;
+    color: white;
+    font-size: 44px;
+}
+
+div img{
+    width: 100%;
+}
+
+/******************************* STYLES FOR SECTION STARTS HERE *****************************/
+section{
+    width: 89%;
+    margin: 5% 5% 0 6%;
+}
+
+section div{
+    width: 31%;
+    display: inline-block;
+    margin-bottom: 80px;
+    margin-right:0.9%;
+    margin-left: 0.9%;
+}
+
+section div h2{ 
+    margin: 15px 0 10px;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+section div p{ 
+    font-weight: 400;
+    font-size: 18px;
+    padding-right: 10px;
+    margin: 25px 0;
+    color: #3e3e3e;
+    line-height: 24px;
+    letter-spacing: 0.5px; 
+}
+
+/******************************* STYLES FOR READ MORE BUTTON STARTS HERE *******************************/
+.read-more-button{
+    background-color: rgb(112, 32, 83);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+/***************************** STYLES FOR READ MORE BUTTON ENDS HERE *******************************/
+
+/******************************* STYLES FOR MANY WONDERS STARTS HERE *******************************/
+.many-wonders{
+    margin: 41px 0;
+    font-size: 70px;
+    font-weight: 300;
+    color: rgb(112, 32, 83);
+    text-align: center;
+}
+
+.many-wonders-section{
+    width: 74%;
+    margin: 0 13% 5%;
+    color: #3e3e3e;
+    line-height: 46px;
+    letter-spacing: 0.8px;
+    text-align: justify;
+    font-size: 27px;
+    font-weight: 300;
+}
+
+/***************************** STYLES FOR FOOTER STARTS HERE *****************************/
+footer{
+    background-color: rgb(112, 32, 83);
+    color: white;
+}
+
+footer div{
+    width: 87%;
+    margin: 0 6.5%;
+    padding: 32px 0;
+}
+
+footer div .copyright{
+    font-weight: 700;
+}
+
+footer div p{
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;  
+}
