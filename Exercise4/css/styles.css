@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -8,10 +9,10 @@ body{
 
 /*********************** STYLES FOR HEADER STARTS HERE ***********************/
 header{
-    background-color: rgb(45, 94, 144);
+    background-color: #2D5E90;
 }
 
-header h2{
+header h1,article header h2{
     color: white;
     padding: 32px 30px;
     text-align: center;
@@ -23,16 +24,16 @@ header h2{
 /******************* STYLES FOR MAIN CONTENT STARTS HERE *******************/
 main{
     width: 83.5%;
-    margin: 2.1% 8.25% 84px;
+    margin: 2.1rem 8.25rem 5.25rem;
 }
 
 /********************* STYLES FOR SECTION STARTS HERE *********************/
-.section1{
+.left-section{
     float: left;   
     width: 61%;
 }
 
-.section2{
+.right-section{
     float: right; 
     width: 37.4%;  
 }
@@ -41,18 +42,18 @@ main{
     margin-bottom: 24px;
 }
 
-article{
-    background-color: rgb(246, 246, 246);
+.tv-article{
+    background-color: #F6F6F6;
     margin-bottom: 20px;
-    border: 1px solid rgb(0, 53, 129);
+    border: 1px solid #003581;
 }
 
-article header h2{
-    padding: 14px 0 14px 24px;
+.tv-article header h2{
+    padding: 14px 24px;
     text-align: left;
 }
 
-section article p{
+section .tv-article p{
     padding: 22px 26px;
     text-align: justify;
     line-height: 26px;
@@ -61,7 +62,7 @@ section article p{
     font-weight: 400;
 }
 
-.section1 p{
+.left-section p{
     padding: 22px 24px;
     word-spacing: 0.25px;
 }
