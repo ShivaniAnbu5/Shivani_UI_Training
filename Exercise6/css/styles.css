@@ -93,9 +93,6 @@ main{
 
 
 /***************************************** SECTION STYLES STARTS HERE *****************************************/
-section{
-    /* background-color: rgb(48, 67, 67); */
-}
 section article{
     display: inline-block;
     width: 21%;
