@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*********************************** STYLES FOR HEADER ***********************************/
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header .designer-email-container p{
+    margin: 4% 10.5% 7.4% 0;
+    font-size: 2em;
+    font-weight: 900;
+    text-align: end;
+}
+
+header .designer-details-container p:nth-child(1){
+    text-align: center;
+    font-size: 10.5em;
+    font-weight: 300;
+}
+
+header .designer-details-container p:nth-child(1) span{
+    font-weight: 900;
+}
+
+header .designer-details-container p:nth-child(2){
+    margin-top: 0.7%;
+    text-align: center;
+    color: rgb(206, 206, 206);
+    font-size: 3.125em;
+    font-weight: 700;
+}
+
+header div:nth-child(2) p:nth-child(2) span{
+    color: rgb(91, 142, 220);
+
+}
+
+/************************* STYLES FOR IMAGE SECTION STARTS HERE*************************/
+#images-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:79%;
+    margin: 9% 10.5% 8%;
+    row-gap: 28px;
+}
+
+#images-section div{
+    margin:0.1% 0.1%;
+    width:31.7%;
+}
+
+#images-section div img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+/************************* STYLES FOR IMAGE SECTION ENDS HERE *************************/
+
+#big-names{
+    text-align: center;
+    margin-top: 8.3%;
+    color: rgb(206, 206, 206);
+    font-size: 3.25em;
+    font-weight: 700;
+}
+
+#big-names span{
+    color: rgb(194, 231, 145);
+
+}
+
+/************************* STYLES FOR LOGO SECTION STARTS HERE*************************/
+#logos-section{
+    display: flex;
+    justify-content: space-between;
+    width:79%;
+    margin: 5% 10.5% 0;
+}
+
+.logo-image-container{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-image-container div{
+    width: 35%;
+    height: 60%;
+    text-align: center;
+}
+
+.logo-image-container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-image-container #last-image{
+    height: 85%;
+}
+/************************* STYLES FOR LOGO SECTION ENDS HERE*************************/
+
+#horizontal-break{
+    display: flex;
+    width:50%;
+    margin: 15% 25% 0;
+    justify-content: center;
+}
+
+hr:first-child{
+    width:40px;
+    margin-right: 40px;
+}
+
+hr:last-child{
+    width:220px;
+}
+
+ /************************* STYLES FOR FONT CONTAINER STARTS HERE *************************/
+#fonts-container{
+    text-align: center;
+    margin-top: 6.5%;
+    
+}
+
+.icon{
+    font-size: 30px;
+    border:1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left:1%;
+}
+ /************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
+
+#coded{
+    margin: 5% 0 9% 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/********************************** RESPONSIVE DESIGN **********************************/
+@media screen and (max-width:475px){
+    header{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    header .designer-email-container p{
+        margin: 2% 0 0 0;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    header .designer-details-container p:nth-child(1){
+        margin-top: 58%;
+        font-size: 2.5em;
+        letter-spacing: 2px;
+    }
+
+    header .designer-details-container p:nth-child(2){
+        margin-top: 4%;
+        font-size: 1.55em;
+        letter-spacing: 1.2px;
+    }
+
+    #images-section{
+        margin-top: 26%;
+        width:90%;
+        margin: 9% 5% 8%;
+        row-gap: 10px;
+    }
+
+    #images-section div{
+        width:100%;
+    }
+
+    #big-names{
+        font-size: 1.6em;
+        margin-top: 20%;
+    }
+
+    #logos-section{
+        flex-direction: column;
+        row-gap:60px;
+        margin-top: 17%;
+    }
+
+    .logo-image-container{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logo-image-container #adidas{
+       width: 60%;
+    }
+
+    #horizontal-break{
+        margin-top: 39%;
+    }
+
+    #fonts-container{
+        margin-top: 14%;
+    }
+
+    .icon{
+        font-size: 24px;
+        margin:0 1.6%;
+    }
+
+    #coded{
+        margin: 16% 0 14% 0;
+    }
+}
