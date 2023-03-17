@@ -15,7 +15,7 @@ img{
 /************************************************* HEADER STYLES STARTS HERE *************************************************/
 header{
     width:85%;
-    margin:4.8% 6% 0% 8%;
+    margin:4.8em 6em 0em 8em;
 }
 
 #logo-container img{
@@ -88,7 +88,7 @@ header{
 /************************************************* MAIN STYLES STARTS HERE *************************************************/
 main{
     width:89%;
-    margin:2.8% 4% 8% 7%;
+    margin:2.8em 4em 8em 7em;
 }
 
 
@@ -97,8 +97,7 @@ section article{
     display: inline-block;
     width: 21%;
     margin: 0 26px;
-    margin-bottom: 3.8%;
-    /* border:1px solid green; */
+    margin-bottom: 3.8em;
 }
 
 article .icon-image{ 
@@ -107,9 +106,8 @@ article .icon-image{
 }
 
 .size-icon{
-    position: relative;
-    top: 110px;
-    left: 246px;
+    margin-top: 2.8em;
+    margin-left: 15.4em;
     background-color: #90B085;
     width: 55px;
     height: 55px;
@@ -123,12 +121,17 @@ article .icon-image{
     padding: 14px 0;
 }
 
-article .icon-image img{
-    position: relative;
-    top:20%;
-    display: block;
-    margin:auto auto;
+.product-image-container{
     height: 60%;
+    width: 70%;
+    margin:auto;
+    margin-top :3.8em;
+}
+
+.product-image-container img{
+    width:100%;
+    height: 100%; 
+    object-fit: contain;
 }
 
 .article-description .product-name{
