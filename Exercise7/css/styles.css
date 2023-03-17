@@ -44,7 +44,7 @@ header .designer-details-container p:nth-child(2){
     font-weight: 700;
 }
 
-header div:nth-child(2) p:nth-child(2) span{
+header .designer-details-container p:nth-child(2) span{
     color: #5b8edc;
 
 }
@@ -60,15 +60,9 @@ header div:nth-child(2) p:nth-child(2) span{
 }
 
 .images-section div{
-    margin:0.1% 0.1%;
     width:31.7%;
 }
 
-.images-section div img{
-    width:100%;
-    height: 100%;
-    object-fit: contain;
-}
 /************************* STYLES FOR IMAGE SECTION ENDS HERE *************************/
 
 #big-names{
@@ -81,7 +75,6 @@ header div:nth-child(2) p:nth-child(2) span{
 
 #big-names span{
     color: #c2e791;
-
 }
 
 /************************* STYLES FOR LOGO SECTION STARTS HERE*************************/
@@ -106,13 +99,12 @@ header div:nth-child(2) p:nth-child(2) span{
 }
 
 .logo-image-container div img{
-    width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 .logo-image-container #last-image{
-    height: 85%;
+    width: 80%;
 }
 /************************* STYLES FOR LOGO SECTION ENDS HERE*************************/
 
