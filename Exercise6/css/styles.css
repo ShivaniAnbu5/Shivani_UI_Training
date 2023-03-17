@@ -101,13 +101,15 @@ section article{
 }
 
 article .icon-image{ 
+    position: relative;
     background-color: #24252A;
     height: 410px;   
 }
 
 .size-icon{
-    margin-top: 2.8em;
-    margin-left: 15.4em;
+    position: absolute;
+    top: 23.8em;
+    left: 15.4em;
     background-color: #90B085;
     width: 55px;
     height: 55px;
@@ -167,7 +169,7 @@ article button:hover{
 #star-container {
     position: relative;
     width:9%;
-    left:278px;
+    left:273px;
     top:20px;
     height: 28px;
 }
