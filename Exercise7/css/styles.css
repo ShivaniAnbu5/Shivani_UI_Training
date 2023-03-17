@@ -135,7 +135,6 @@ main{
 .fonts-container{
     text-align: center;
     margin-top: 118px;
-    
 }
 
 .icon{
@@ -146,11 +145,11 @@ main{
     margin-left:16px;
 }
 
-.fb{
-    padding:10px 16px;
+.fa-facebook-f{
+    padding:10px 14px;
 }
 
-.m-icon{
+.fa-m{
     font-family: serif;
 }
  /************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
@@ -225,12 +224,16 @@ main{
         margin:0 auto;
     }
 
+    .horizontal-break p:first-child{
+        margin-right: 25px;
+    }
+
     .fonts-container{
         margin-top: 40px;
     }
 
     .icon{
-        font-size: 24px;
+        font-size: 22px;
         margin:0 4px;
     }
 
