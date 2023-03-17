@@ -1,5 +1,6 @@
 *{
     margin:0;
+    padding: 0;
     box-sizing: border-box;    
 }
 
@@ -20,7 +21,7 @@ header{
 }
 
 header .designer-email-container p{
-    margin: 4% 10.5% 7.4% 0;
+    margin: 64px 168px 118px 0;
     font-size: 2em;
     font-weight: 900;
     text-align: end;
@@ -29,7 +30,7 @@ header .designer-email-container p{
 header .designer-details-container p:nth-child(1){
     text-align: center;
     font-size: 10.5em;
-    font-weight: 300;
+    font-weight: lighter;
 }
 
 header .designer-details-container p:nth-child(1) span{
@@ -37,7 +38,7 @@ header .designer-details-container p:nth-child(1) span{
 }
 
 header .designer-details-container p:nth-child(2){
-    margin-top: 0.7%;
+    margin-top: 11px;
     text-align: center;
     color: #cecece;
     font-size: 3.125em;
@@ -50,12 +51,16 @@ header .designer-details-container p:nth-child(2) span{
 }
 
 /************************* STYLES FOR IMAGE SECTION STARTS HERE*************************/
+main{
+    width:79%;
+    margin: 144px auto 40px;
+    /* background-color: grey; */
+}
+
 .images-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width:79%;
-    margin: 9% 10.5% 8%;
     row-gap: 28px;
 }
 
@@ -67,7 +72,7 @@ header .designer-details-container p:nth-child(2) span{
 
 #big-names{
     text-align: center;
-    margin-top: 8.3%;
+    margin-top: 139px;
     color: #cecece;
     font-size: 3.25em;
     font-weight: 700;
@@ -82,7 +87,7 @@ header .designer-details-container p:nth-child(2) span{
     display: flex;
     justify-content: space-between;
     width:79%;
-    margin: 5% 10.5% 0;
+    margin: 80px 168px 0;
 }
 
 .logo-image-container{
@@ -111,23 +116,25 @@ header .designer-details-container p:nth-child(2) span{
 .horizontal-break{
     display: flex;
     width:50%;
-    margin: 15% 25% 0;
+    margin: 320px 350px 0;
     justify-content: center;
 }
 
-hr:first-child{
+.horizontal-break p:first-child{
     width:40px;
     margin-right: 40px;
+    border-bottom: 1px solid #ffffff;
 }
 
-hr:last-child{
+.horizontal-break p:last-child{
     width:220px;
+    border-bottom: 1px solid #ffffff;
 }
 
  /************************* STYLES FOR FONT CONTAINER STARTS HERE *************************/
 .fonts-container{
     text-align: center;
-    margin-top: 6.5%;
+    margin-top: 118px;
     
 }
 
@@ -136,7 +143,7 @@ hr:last-child{
     border:1px solid #ffffff;
     border-radius: 50%;
     padding: 10px;
-    margin-left:1%;
+    margin-left:16px;
 }
 
 .fb{
@@ -149,9 +156,11 @@ hr:last-child{
  /************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
 
 #coded{
-    margin: 5% 0 9%;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 80px 0 144px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 /********************************** RESPONSIVE DESIGN **********************************/
@@ -162,27 +171,29 @@ hr:last-child{
     }
 
     header .designer-email-container p{
-        margin: 2% 0 0;
+        margin: 10px 0 0;
         font-size: 0.9em;
         text-align: center;
     }
     
     header .designer-details-container p:nth-child(1){
-        margin-top: 58%;
+        margin-top: 180px;
         font-size: 2.5em;
         letter-spacing: 2px;
     }
 
     header .designer-details-container p:nth-child(2){
-        margin-top: 4%;
+        margin-top: 16px;
         font-size: 1.55em;
         letter-spacing: 1.2px;
     }
 
-    .images-section{
-        margin-top: 26%;
+    main{
         width:90%;
-        margin: 9% 5% 8%;
+    }
+    .images-section{
+        width: 100%;
+        margin: -66px auto 128px;
         row-gap: 10px;
     }
 
@@ -192,13 +203,13 @@ hr:last-child{
 
     #big-names{
         font-size: 1.6em;
-        margin-top: 20%;
+        margin-top: -74px;
     }
 
     .logos-section{
         flex-direction: column;
         row-gap:60px;
-        margin-top: 17%;
+        margin:60px auto 140px;
     }
 
     .logo-image-container{
@@ -211,19 +222,21 @@ hr:last-child{
     }
 
     .horizontal-break{
-        margin-top: 39%;
+        margin:0 auto;
     }
 
     .fonts-container{
-        margin-top: 14%;
+        margin-top: 40px;
     }
 
     .icon{
         font-size: 24px;
-        margin:0 1.6%;
+        margin:0 4px;
     }
 
     #coded{
-        margin: 16% 0 14%;
+        margin: 48px 0 0;
+        font-weight: 400;
+        font-size: 17px;
     }
 }
