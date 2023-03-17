@@ -57,7 +57,10 @@ const formattedDate = day + '/' + month + '/' + year;
 console.log(formattedDate);
 
 //3
-// var celsius = parseFloat(prompt("Enter the temperature in celsius: "));
+var celsius = parseFloat(prompt("Enter the temperature in celsius: "));
+while(isNaN(celsius)){
+    celsius = parseFloat(prompt("Enter a valid temperature in celsius: "));
+}
 function convertToFahrenheit(celsius){
     return celsius * (9/5) + 32;
 }
