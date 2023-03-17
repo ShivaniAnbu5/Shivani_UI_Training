@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+/*************************************** STYLES FOR BODY ***************************************/
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('../images/background-image.png');
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    background-position: right top;
+}
+
+/******************************* STYLES FOR HEADINGS STARTS HERE *******************************/
+h1,h2{
+    position: absolute;
+}
+
+.fancy-hats{
+    top:46px;
+    left:630px;
+    font-size: 80px;
+    letter-spacing: 8px;
+}
+
+.hats-for{
+    bottom:180px;
+    left:550px;
+    font-size: 120px;
+    letter-spacing: 2px;
+}
+
+.lifetime {
+    bottom:32px;
+    left:550px;
+    font-size: 155px;
+    letter-spacing: 8px;
+}
+
+.since,.year{
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+}
+
+.since{
+    right:40px;
+    font-size: 46px;
+    letter-spacing: 1px;
+    top:325px;
+}
+
+.year{
+    right:26px;
+    font-size: 120px;
+    letter-spacing: 3px;
+    top:56px;
+}
+
+/******************************* STYLES FOR HEADINGS ENDS HERE *******************************/
+
+/*********************** STYLES FOR MENU ICON AND MENU BAR STARTS HERE ***********************/
+.menu-icon{
+    margin-top:42px;
+    background-color: #000000;
+    padding: 30px;
+    font-size: 30px;
+    width: 5%;
+}
+
+.menu-bar{
+    background-color: #000000;
+    width: 17em;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 40px 0;
+    display: none;
+}
+
+.menu-icon:hover,.menu-bar:hover{
+    cursor: pointer;
+}
+
+.menu-icon:hover + .menu-bar{
+    animation-name: menuanimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    display: block;   
+}
+
+@keyframes menuanimation {
+    0%{
+       opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+    
+}
+
+.hat-icon-container{
+    width: 38%;
+    margin: 0 auto;
+}
+
+.hat-icon-container img{
+    width: 100%;
+}
+
+.menu-bar ul{
+    text-align: center;
+    padding:18px 0;
+    height: 610px;
+}
+.menu-bar ul li{
+   list-style: none;
+   padding: 11px 0;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+}
+/************************** STYLES FOR MENU ICON AND MENU BAR ENDS HERE **************************/
+
+/********************************** STYLES FOR FOOTER STARTS HERE **********************************/
+footer{
+    position: absolute;
+    bottom: 20px;
+    right: 18px;
+}
+
+.icon{
+    font-size: 36px;
+    margin: 0 6px;
+}
+/********************************** STYLES FOR FOOTER ENDS HERE **********************************/
