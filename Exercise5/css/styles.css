@@ -2,10 +2,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-html{
-    font-size: 16px;
-    background-color: pink;
-}
+
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -26,20 +23,19 @@ header h1,article header h2{
 
 /******************************** STYLES FOR MAIN CONTENT STARTS HERE ********************************/
 main{
-    width: 50rem;
-    background-color: green;
-    /* margin: 2.4rem 9rem 5.25rem; */
+    width: 83.5%;
+    margin: 2.4em auto 5.25em;
 }
 
 /********************************** STYLES FOR SECTION STARTS HERE **********************************/
 .left-section{
     float: left;   
-    width: 55rem;
+    width: 61%;
 }
 
 .right-section{
     float: right; 
-    width: 33.7rem;  
+    width: 37.4%;
 }
 
 .section2 article{
@@ -78,31 +74,8 @@ section .tv-article p{
 
 /************************************ TO MAKE THE PAGE RESPONSIVE ************************************/
 
-@media screen and (max-width:1440px){
-    html{
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width:1024px){
-    html{
-        font-size: 9.4px;
-    }
-}
 
 @media screen and (max-width:768px){
-    html{
-        font-size: 7px;
-    }
-    .left-section,.right-section{
-        width:100%;
-    }
-}
-
-@media screen and (max-width:425px){
-    html{
-        font-size: 3.8px;
-    }
     .left-section,.right-section{
         width:100%;
     }
