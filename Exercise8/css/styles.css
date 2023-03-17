@@ -20,8 +20,8 @@ h1,h2{
 .fancy-hats{
     top:46px;
     left:630px;
-    font-size: 80px;
-    letter-spacing: 8px;
+    font-size: 90px;
+    letter-spacing: 4px;
 }
 
 .hats-for{
@@ -61,7 +61,6 @@ h1,h2{
 
 /*********************** STYLES FOR MENU ICON AND MENU BAR STARTS HERE ***********************/
 .menu{
-    background-color: aqua;
     width: 5%;
     height: 110px;
 }
@@ -74,6 +73,7 @@ h1,h2{
 }
 
 .menu-bar{
+    position: relative;
     background-color: #000000;
     width: 17em;
     border-top-right-radius: 25px;
@@ -95,10 +95,10 @@ h1,h2{
 
 @keyframes menuanimation {
     0%{
-       opacity: 0;
+        left: -17em;
     }
     100%{
-      opacity: 1;
+      left:0;
     }
     
 }
@@ -122,9 +122,15 @@ h1,h2{
    padding: 11px 0;
 }
 
+.menu-bar ul li:hover {
+    background-color: #ffffff;
+}
+.menu-bar ul li:hover a{
+    color: #000000;
+}
 .menu-bar ul li a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 200;
 }
@@ -133,7 +139,7 @@ h1,h2{
 /********************************** STYLES FOR FOOTER STARTS HERE **********************************/
 footer{
     position: absolute;
-    bottom: 20px;
+    bottom: 24px;
     right: 18px;
 }
 
