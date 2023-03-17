@@ -14,7 +14,13 @@ calculator = {
 }
 
 var value1 = parseInt(prompt("Enter value 1: "));
-var value2 = parseInt(prompt("Enter value 2: "));
+while(isNaN(value1)){
+    value1 = parseInt(prompt("Enter a valid value 1: "));
+}
+var value2 = parseInt(prompt("Enter value 2(>0): "));
+while(isNaN(value2) || (value2<=0)){
+    value2 = parseInt(prompt("Enter a valid value 2 greater than 0: "));
+}
 
 console.log("Addition: "+value1+" + "+value2+" = "+ calculator.add(value1,value2));
 console.log("Subtraction: "+value1+" - "+value2+" = "+ calculator.sub(value1,value2));
