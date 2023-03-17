@@ -1,5 +1,6 @@
 *{
     margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -59,12 +60,17 @@ h1,h2{
 /******************************* STYLES FOR HEADINGS ENDS HERE *******************************/
 
 /*********************** STYLES FOR MENU ICON AND MENU BAR STARTS HERE ***********************/
+.menu{
+    background-color: aqua;
+    width: 5%;
+    height: 110px;
+}
+
 .menu-icon{
     margin-top:42px;
     background-color: #000000;
     padding: 30px;
     font-size: 30px;
-    width: 5%;
 }
 
 .menu-bar{
@@ -76,11 +82,11 @@ h1,h2{
     display: none;
 }
 
-.menu-icon:hover,.menu-bar:hover{
+.menu-icon:hover,ul:hover{
     cursor: pointer;
 }
 
-.menu-icon:hover + .menu-bar{
+.menu:hover .menu-bar{
     animation-name: menuanimation;
     animation-duration: 2s;
     animation-fill-mode: forwards;
