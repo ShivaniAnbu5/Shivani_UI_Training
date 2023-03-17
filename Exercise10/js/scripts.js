@@ -29,7 +29,8 @@ playersList.sort();
 console.log("Players list after sorting:"+playersList);
 
 //6
-playersListIWithJerseyNum = playersList.map(playerName => playerName+"-"+Math.ceil(Math.random()*20));
+var jerseyNumber = 0;
+playersListIWithJerseyNum = playersList.map(playerName => playerName+"-"+(++jerseyNumber));
 console.log("New players list with jersey number :"+playersListIWithJerseyNum);
 
 //7
@@ -46,3 +47,32 @@ function displayNumbers(){
 displayNumbers();
 
 //2
+const date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+if (day < 10) day = '0' + day;
+if (month < 10) month = '0' + month;
+const formattedDate = day + '/' + month + '/' + year;
+console.log(formattedDate);
+
+//3
+// var celsius = parseFloat(prompt("Enter the temperature in celsius: "));
+function convertToFahrenheit(celsius){
+    return celsius * (9/5) + 32;
+}
+console.log("Celsius: "+celsius+" Fahrenheit: "+convertToFahrenheit(celsius));
+
+//4
+function averageOfArray(array){
+       return array.reduce((num1,num2)=>num1+num2) / array.length;
+}
+array = [20,20,20,40];
+console.log(averageOfArray(array));
+
+//5
+var str = "This is a string";
+var splitString = str.split(""); 
+var reversedStringArray = splitString.reverse();
+var reversedString = reversedStringArray.join("");
+console.log(reversedString);
