@@ -36,7 +36,7 @@ header{
 }
 
 .icon{
-    background-color: rgb(216, 216, 216);
+    background-color: #d8d8d8;
     width:68px;
     height: 68px;
     border-radius: 50%;
@@ -54,7 +54,7 @@ header{
 .menu{
     position: absolute;
     right: 0px;
-    display: none;
+    /* display: none; */
     width:264px;
     height: 182px;
     margin-top: 16px;
@@ -76,6 +76,7 @@ header{
   }
   .menu li{
       margin:0 0 20px 0;
+      font-size: 17px;
   }
   .menu li a{
       text-decoration: none;
@@ -94,14 +95,14 @@ main{
 
 /***************************************** SECTION STYLES STARTS HERE *****************************************/
 section article{
+    position: relative;
     display: inline-block;
     width: 21%;
     margin: 0 26px;
-    margin-bottom: 3.8em;
+    margin-bottom: 3.5em;
 }
 
 article .icon-image{ 
-    position: relative;
     background-color: #24252A;
     height: 410px;   
 }
@@ -152,7 +153,7 @@ article .icon-image{
 
 .article-description button{
     margin-top: 14px;
-    padding: 12px 20px;
+    padding: 11px 19px;
     font-size: 16px;
     font-weight: 600;
     background-color: #2A2B30;
