@@ -38,7 +38,7 @@ header h1{
 .row .card{
     width:32.4%;
     height: 108px;
-    margin:7px;
+    margin:9px 7px;
     background-color: rgb(82, 102, 175);
     padding:10px;
 }
