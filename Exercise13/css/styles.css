@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    background-color: rgb(55, 30, 99);
+    height: 100px;
+}
+
+header h1{
+    padding: 34px 34px;
+    font-weight: 100;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.row{
+    width: 90%;
+    margin:56px auto;
+    /* background-color: aqua; */
+}
+.row, .card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row .card{
+    width:32.4%;
+    height: 108px;
+    margin:7px;
+    background-color: rgb(82, 102, 175);
+    padding:10px;
+}
+
+.img-container{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 6px;
+}
+
+.img-container img{
+    width:100%; 
+    height: 100%;
+}
+
+.row .card .details{
+    padding:0 16px;
+    font-size: 21px;
+}
+
+.email{
+    font-weight: 100;
+    font-size: 17px;
+    color: rgb(222, 226, 240);
+}
