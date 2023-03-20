@@ -13,29 +13,38 @@ body{
 }
 
 /******************************* STYLES FOR HEADINGS STARTS HERE *******************************/
-h1,h2{
+h1,.hats-for-a-lifetime,.since-year{
     position: absolute;
 }
 
 .fancy-hats{
-    top:46px;
-    left:630px;
-    font-size: 90px;
+    top:40px;
+    left:610px;
+    font-size: 96px;
     letter-spacing: 4px;
 }
 
-.hats-for{
-    bottom:180px;
+.hats-for-a-lifetime{
+    bottom:32px;
     left:550px;
+    font-weight: 600;
+}
+
+.hats-for{
     font-size: 120px;
-    letter-spacing: 2px;
+    letter-spacing: 2px;  
 }
 
 .lifetime {
-    bottom:32px;
-    left:550px;
+    margin-top: -35px;
     font-size: 155px;
     letter-spacing: 8px;
+}
+
+.since-year{
+    top:40px;
+    right:94px;
+    font-weight: 600;
 }
 
 .since,.year{
@@ -44,17 +53,15 @@ h1,h2{
 }
 
 .since{
-    right:40px;
     font-size: 46px;
     letter-spacing: 1px;
-    top:325px;
+    margin-left: 70px;
+    margin-top: 14px;
 }
 
 .year{
-    right:26px;
     font-size: 120px;
     letter-spacing: 3px;
-    top:56px;
 }
 
 /******************************* STYLES FOR HEADINGS ENDS HERE *******************************/
@@ -66,7 +73,7 @@ h1,h2{
 }
 
 .menu-icon{
-    margin-top:42px;
+    margin-top:44px;
     background-color: #000000;
     padding: 30px;
     font-size: 30px;
