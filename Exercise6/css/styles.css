@@ -54,7 +54,7 @@ header{
 .menu{
     position: absolute;
     right: 0px;
-    /* display: none; */
+    display: none;
     width:264px;
     height: 182px;
     margin-top: 16px;
