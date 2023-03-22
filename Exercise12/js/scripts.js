@@ -14,8 +14,6 @@ var nextButton = document.querySelector(".next-button");
 var calculateButton = document.querySelector(".calculate-button");
 var startButton = document.querySelector(".start-button");
 
-var circleValueSection = document.querySelector(".circle-value-section");
-
 var valueHeading = document.querySelector(".value-heading");
 var resultHeading = document.querySelector(".result-heading");
 
@@ -31,16 +29,13 @@ var shapeObject={
     inputValue:"",
 }
 
-var object,returnedObject;
-
 // IF THE OBJECT IS NOT NULL,THEN GET THAT AND ASSIGN
 if(sessionStorage.getItem("shapeObject") != null){
-    object = JSON.parse(sessionStorage.getItem("shapeObject"));
+    var object = JSON.parse(sessionStorage.getItem("shapeObject"));
     nextButton.style.display = "inline";
     icon.setAttribute("class","fa-solid fa-check icon "+object.selectedShape+"Icon");
     document.getElementsByClassName(object.selectedShape)[0].appendChild(icon);
-    inputBox.value = object.inputValue;
-    
+ 
     shapeObject={
         selectedShape: object.selectedShape,
         givenValue: object.givenValue,
@@ -89,16 +84,15 @@ const shapes = [
 
 // CLICK EVENT LISTENER FOR THE SHAPE CONTAINER
 shapesContainer.addEventListener("click",(event)=>{
-    var text = event.target.className;
-    console.log(text);
-    const parentNode = document.getElementsByClassName(text)[0];
+    var shapeName = event.target.className;
+    const parentNode = document.getElementsByClassName(shapeName)[0];
     if(!parentNode.contains(icon)){
-        icon.setAttribute("class","fa-solid fa-check icon "+text+"Icon");
-        document.getElementsByClassName(text)[0].appendChild(icon);
+        icon.setAttribute("class","fa-solid fa-check icon "+shapeName+"Icon");
+        document.getElementsByClassName(shapeName)[0].appendChild(icon);
     } 
     nextButton.style.display = "inline";
     shapesSection.appendChild(nextButton);
-    shapeObject.selectedShape = text;
+    shapeObject.selectedShape = shapeName;
     sessionStorage.setItem("shapeObject",JSON.stringify(shapeObject));
 });
 
