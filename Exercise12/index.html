@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Math kids</title>
+  </head>
+  <body>
+
+    <!---------------------------------- HEADER STARTS HERE ---------------------------------->
+    <header>
+      <h1>MATH KIDS</h1>
+      <h1>KIDS LEARNING APP</h1>
+    </header>
+    <!---------------------------------- HEADER ENDS HERE ---------------------------------->
+
+    <!---------------------------------- SHAPE SECTION STARTS HERE ---------------------------------->
+    <section class="shape-section">
+      <h1>1. Choose a Shape</h1>
+      <div class="shapes-container">
+        <div class="circle">
+        </div>
+
+        <div class="triangle-container">
+          <div class="triangle"></div>
+        </div>
+
+        <div class="square">
+        </div>
+      </div>
+      <button class="next-button">NEXT</button>
+    </section>
+    <!---------------------------------- SHAPE SECTION ENDS HERE ---------------------------------->
+
+    <!---------------------------------- VALUE SECTION STARTS HERE ---------------------------------->
+    <section class="value-section">
+        <h1 class="value-heading"></h1>
+        <input type="number" class="input-box" autofocus />
+        <br />
+        <button class="calculate-button">CALCULATE</button>
+    </section>
+    <!---------------------------------- VALUE SECTION ENDS HERE ---------------------------------->
+
+    <!---------------------------------- RESULT SECTION STARTS HERE ---------------------------------->
+    <section class="result-section">
+        <div class="circle"></div>
+        <h1 class="result-heading"></h1>
+        <table>
+          <tr>
+            <td class="property"></td>
+            <td class="formula formulaBgColor"></td>
+            <td class="result1 resultBgColor"></td>
+          </tr>
+          <tr>
+            <td class="property">AREA</td>
+            <td class="area-formula formulaBgColor"></td>
+            <td class="result2 resultBgColor"></td>
+          </tr>
+          <tr>
+            <td class="property">PERIMETER</td>
+            <td class="perimeter-formula formulaBgColor"></td>
+            <td class="result3 resultBgColor"></td>
+          </tr>
+        </table>
+        <button class="start-button">START AGAIN</button>
+    </section>
+    <!---------------------------------- RESULT SECTION ENDS HERE ---------------------------------->
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
