@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*********************************** STYLES FOR MAIN STARTS HERE ***********************************/
+main{
+   width:37%;
+   margin:0 auto 100px;
+}
+/*********************************** STYLES FOR MAIN ENDS HERE ************************************/
+
+/***************************** STYLES FOR IMAGE CONTAINER STARTS HERE *****************************/
+.image-container{
+    width:300px;
+    margin: -50px auto 0;
+}
+
+.image-container img{
+    width:300px;
+}
+/***************************** STYLES FOR IMAGE CONTAINER ENDS HERE *****************************/
+
+/********************************* STYLES FOR FORM STARTS HERE *********************************/
+.form-container{
+    margin-top: -56px;
+    background-color: #ffffff;
+    padding: 40px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex div{
+    width:48%;
+}
+
+.billing-details,.payment-details{
+    color: #071b6d;
+    font-size: 20px;
+}
+
+.billing-details{
+    margin-bottom: 30px;
+}
+
+.payment-details{
+    margin: 30px 0 20px 0;
+}
+
+.error{
+    margin-bottom: 20px;
+    color:#a4332c;
+    font-size: 12px;
+}
+
+button{
+    background-color: #071b6d;
+    color: #ffffff;
+    font-size: 14px;
+    margin:4px 0 14px;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding:0 10px;
+}
+
+input{
+    margin:4px 0 4px;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #fefefe;
+    outline: none;
+    padding:0 10px;
+}
+
+label{
+    font-size: 12px;
+}
+/********************************* STYLES FOR FORM ENDS HERE *********************************/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+    <!------------------------------------------ MAIN CONTENT STARTS HERE ------------------------------------------>
+    <main>
+        <!------------------------------------- DIVISION FOR IMAGE STARTS HERE ------------------------------------->
+        <div class="image-container">
+            <img src="images/Sirius_CDW_Cobranded_PMS2747.svg" alt="Sirius image">
+        </div>
+         <!------------------------------------- DIVISION FOR IMAGE ENDS HERE ------------------------------------->
+
+        <div class="form-container">
+            <!------------------------------------- FORM STARTS HERE ------------------------------------->
+            <form name="billingForm">
+                <p class="billing-details">BILLING DETAILS</p>
+
+                <div class="flex">
+                    <div class="first-name-container">
+                        <label for="first-name">First Name</label><br>
+                        <input type="text" name="first-name" class="firstName"><br>
+                        <p class="error"></p>
+                    </div>
+                    <div class="last-name-container">
+                        <label for="last-name">Last Name</label><br>
+                        <input type="text" name="last-name" class="lastName"><br>
+                        <p class="error"></p>
+                    </div>
+                 </div>
+
+                <label for="email">Email Address</label><br>
+                <input type="email" name="email" class="email"><br>
+                <p class="error"></p>
+
+                <label for="contact-number">Contact Number</label><br>
+                <input type="text" name="contact-number" class="contact"><br>
+                <p class="error"></p>
+
+                <label for="pincode">PIN Code</label><br>
+                <input type="number" name="pincode"  class="pincode"><br>
+                <p class="error"></p>
+
+                <p class="payment-details">PAYMENT DETAILS</p>
+
+                <label for="card-number">Card Number</label><br>
+                <input type="number" name="card-number" class="cardNumber"><br>
+                <p class="error"></p>
+
+                <div class="flex">
+                    <div>
+                    <label for="card-expiry">Card Expiry(Year)</label><br>
+                    <input type="number" name="card-expiry" class="cardExpiry"><br>
+                    <p class="error"></p>
+                    </div>
+                    <div>
+                    <label for="cvv">CVV</label><br>
+                    <input type="number" name="cvv" class="cvv"><br>
+                    <p class="error"></p>
+                    </div>
+                </div>
+
+                <button type="submit" class="submitBtn" >COMPLETE PAYMENT</button>
+            </form>
+             <!------------------------------------- FORM ENDS HERE ------------------------------------->
+        </div>
+    </main>
+     <!------------------------------------------ MAIN CONTENT ENDS HERE ------------------------------------------>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
