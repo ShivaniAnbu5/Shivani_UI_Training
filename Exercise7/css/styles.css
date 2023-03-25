@@ -179,7 +179,6 @@ header .designer-details-container p:nth-child(2) span{
     }
     
     header .designer-details-container p:nth-child(1){
-        margin-top: 180px;
         font-size: 2.5em;
         letter-spacing: 2px;
     }
