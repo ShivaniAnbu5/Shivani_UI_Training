@@ -1,6 +1,10 @@
 // FOR APPENDING DATA TO THE DESCRIPTION-COMMENTS SECTION
-$.get("https://mocki.io/v1/4da47fc5-bbf3-4e41-b35f-c88a584bc4b0",(data)=>{
-
+$.ajax({
+    url: "https://mocki.io/v1/4da47fc5-bbf3-4e41-b35f-c88a584bc4b0",
+    error: () => {
+      console.log("Error has occured");
+    },
+    success: (data) =>{
         var output =  $(".desc-comments");
 
         var videoContainer = $(".video-container");
@@ -76,25 +80,31 @@ $.get("https://mocki.io/v1/4da47fc5-bbf3-4e41-b35f-c88a584bc4b0",(data)=>{
 
         }
         output.append(commentsContainer);
-        
-});
-
+    },
+  });
 
 // FOR APPENDING DATA TO THE UPCOMING-PROJECTS SECTION
-$.get("https://mocki.io/v1/8c9b378b-d248-4203-93b0-b8e7659ac346",(data) =>{
-    var output =  $(".posters-container");
+$.ajax({
+    url: "https://mocki.io/v1/8c9b378b-d248-4203-93b0-b8e7659ac346",
+    error: () => {
+        console.log("Error has occured");
+      },
+      success: (data) =>{
+            var output =  $(".posters-container");
+        
+            for(let tempData in data){
+                let posterImageContainer = $("<div>");
+                posterImageContainer.attr("class","posterImageContainer");
+                let posterImage = $("<img>");
+        
+                posterImage.attr("src",data[tempData].imageUrl);
+                posterImage.attr("alt",data[tempData].title);
+                posterImage.attr("class","posterImage");
+        
+                posterImageContainer.append(posterImage);
+                output.append(posterImageContainer);
+        
+               }  
+        },
 
-    for(let tempData in data){
-        let posterImageContainer = $("<div>");
-        posterImageContainer.attr("class","posterImageContainer");
-        let posterImage = $("<img>");
-
-        posterImage.attr("src",data[tempData].imageUrl);
-        posterImage.attr("alt",data[tempData].title);
-        posterImage.attr("class","posterImage");
-
-        posterImageContainer.append(posterImage);
-        output.append(posterImageContainer);
-
-    }  
-});
+  });
