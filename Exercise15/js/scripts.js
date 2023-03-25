@@ -10,6 +10,7 @@ fetch("./data/video.json")
         video.setAttribute("src",data.videoUrl);
         video.setAttribute("controls",true);
         video.setAttribute("width","100%");
+        video.setAttribute("poster","./images/sprite-fright.png");
         videoContainer.appendChild(video);
         output.append(videoContainer);
 
