@@ -1,0 +1,263 @@
+$secondary : #cecece;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*********************************** STYLES FOR MAIN SECTION ***********************************/
+main{
+    width: 79%;
+    margin: 64px auto 40px;
+}
+
+/*********************************** STYLES FOR HEADER ***********************************/
+$font-weights: 600,700,900;
+@each $fw in $font-weights{
+    .fw-#{$fw}{
+        font-weight : $fw;
+    }
+}
+
+.flex-jc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+
+    .designer-email-container p{
+        @extend .fw-900;
+        font-size: 2em;
+        text-align: end;
+    }
+
+    .designer-details-container{
+        margin-top: 120px;
+
+        p:nth-child(1){
+            @extend .text-align-center;
+            font-size: 11.1em;
+            font-weight: lighter;
+            span{
+                @extend .fw-900;
+            }
+        }
+
+        p:nth-child(2){
+            @extend .text-align-center;
+            @extend .fw-700;
+            color: $secondary;
+            margin-top: 10px;
+            font-size: 3.125em;
+            span{
+                color: #5b8edc;
+            }
+        }       
+    }
+}
+
+/************************* STYLES FOR IMAGE SECTION STARTS HERE*************************/
+.images-section{
+    @extend .flex-jc;
+    margin-top: 160px;
+    flex-wrap: wrap;
+    row-gap: 28px;
+
+    div{
+        width: 31.7%;
+    }
+}
+
+/************************* STYLES FOR IMAGE SECTION ENDS HERE *************************/
+
+#big-names{
+    @extend .text-align-center;
+    @extend .fw-700;
+    color: $secondary;
+    margin-top: 139px;
+    font-size: 3.25em;
+
+    span{
+        color: #c2e791;
+    }    
+}
+
+/************************* STYLES FOR LOGO SECTION STARTS HERE*************************/
+.logos-section{
+    @extend .flex-jc;
+    width: 79%;
+    margin: 80px 168px 0;
+}
+
+.logo-image-container{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+
+    div{
+        @extend .text-align-center;
+        width: 35%;
+        height: 60%;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    #last-image{
+        width: 80%;
+    }
+}
+
+/************************* STYLES FOR LOGO SECTION ENDS HERE*************************/
+
+.horizontal-break{
+    display: flex;
+    width: 50%;
+    margin: 320px 350px 0;
+    justify-content: center;
+
+    p{
+        border-bottom: 1px solid #ffffff;
+    }
+    p:first-child{
+        width:40px;
+        margin-right: 40px;
+    }
+
+    p:last-child{
+        width: 220px;
+    }
+}
+
+ /************************* STYLES FOR FONT CONTAINER STARTS HERE *************************/
+.fonts-container{
+    @extend .text-align-center;
+    margin-top: 118px;
+}
+
+.icon{
+    font-size: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 16px;
+}
+
+.fa-facebook-f{
+    padding: 10px 14px;
+}
+
+.fa-m{
+    font-family: serif;
+}
+ /************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
+
+#coded{
+    @extend .fw-600;
+    @extend .text-align-center;
+    margin: 80px 0 144px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/********************************** RESPONSIVE DESIGN **********************************/
+@media screen and (max-width:475px){
+header{
+    display: flex;
+    flex-direction: column-reverse;
+
+    .designer-email-container p{
+        margin: 10px 0 0;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    .designer-details-container{
+        margin-top: 0px;
+        p:nth-child(1){
+            margin-top: 120px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        p:nth-child(2){
+            margin-top: 16px;
+            font-size: 1.55em;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+main{
+    width: 90%;
+}
+
+.images-section{
+    width: 100%;
+    margin: 80px auto 128px;
+    row-gap: 10px;
+    div{
+        width: 100%;
+    }
+}
+
+#big-names{
+    font-size: 1.6em;
+    margin-top: -74px;
+}
+
+.logos-section{
+    flex-direction: column;
+    row-gap: 60px;
+    margin: 60px auto 140px;
+}
+
+.logo-image-container{
+    width: 100%;
+    justify-content: space-between;
+    #adidas{
+        width: 60%;
+    }
+}
+
+.horizontal-break{
+    margin:0 auto;
+    p:first-child{
+        margin-right: 25px;
+    }
+}
+
+.fonts-container{
+    margin-top: 40px;
+}
+
+.icon{
+    font-size: 22px;
+    margin: 0 4px;
+}
+
+#coded{
+    margin: 48px 0 0;
+    font-weight: 400;
+    font-size: 17px;
+}
+}

@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*********************************** STYLES FOR MAIN SECTION ***********************************/
+main {
+  width: 79%;
+  margin: 64px auto 40px;
+}
+
+/*********************************** STYLES FOR HEADER ***********************************/
+.fw-600, #coded {
+  font-weight: 600;
+}
+
+.fw-700, #big-names, header .designer-details-container p:nth-child(2) {
+  font-weight: 700;
+}
+
+.fw-900, header .designer-details-container p:nth-child(1) span, header .designer-email-container p {
+  font-weight: 900;
+}
+
+.flex-jc, .logos-section, .images-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-align-center, #coded, .fonts-container, .logo-image-container div, #big-names, header .designer-details-container p:nth-child(2), header .designer-details-container p:nth-child(1) {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .designer-email-container p {
+  font-size: 2em;
+  text-align: end;
+}
+header .designer-details-container {
+  margin-top: 120px;
+}
+header .designer-details-container p:nth-child(1) {
+  font-size: 11.1em;
+  font-weight: lighter;
+}
+header .designer-details-container p:nth-child(2) {
+  color: #cecece;
+  margin-top: 10px;
+  font-size: 3.125em;
+}
+header .designer-details-container p:nth-child(2) span {
+  color: #5b8edc;
+}
+
+/************************* STYLES FOR IMAGE SECTION STARTS HERE*************************/
+.images-section {
+  margin-top: 160px;
+  flex-wrap: wrap;
+  row-gap: 28px;
+}
+.images-section div {
+  width: 31.7%;
+}
+
+/************************* STYLES FOR IMAGE SECTION ENDS HERE *************************/
+#big-names {
+  color: #cecece;
+  margin-top: 139px;
+  font-size: 3.25em;
+}
+#big-names span {
+  color: #c2e791;
+}
+
+/************************* STYLES FOR LOGO SECTION STARTS HERE*************************/
+.logos-section {
+  width: 79%;
+  margin: 80px 168px 0;
+}
+
+.logo-image-container {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo-image-container div {
+  width: 35%;
+  height: 60%;
+}
+.logo-image-container div img {
+  height: 100%;
+  object-fit: contain;
+}
+.logo-image-container #last-image {
+  width: 80%;
+}
+
+/************************* STYLES FOR LOGO SECTION ENDS HERE*************************/
+.horizontal-break {
+  display: flex;
+  width: 50%;
+  margin: 320px 350px 0;
+  justify-content: center;
+}
+.horizontal-break p {
+  border-bottom: 1px solid #ffffff;
+}
+.horizontal-break p:first-child {
+  width: 40px;
+  margin-right: 40px;
+}
+.horizontal-break p:last-child {
+  width: 220px;
+}
+
+/************************* STYLES FOR FONT CONTAINER STARTS HERE *************************/
+.fonts-container {
+  margin-top: 118px;
+}
+
+.icon {
+  font-size: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 16px;
+}
+
+.fa-facebook-f {
+  padding: 10px 14px;
+}
+
+.fa-m {
+  font-family: serif;
+}
+
+/************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
+#coded {
+  margin: 80px 0 144px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+/********************************** RESPONSIVE DESIGN **********************************/
+@media screen and (max-width: 475px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  header .designer-email-container p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  header .designer-details-container {
+    margin-top: 0px;
+  }
+  header .designer-details-container p:nth-child(1) {
+    margin-top: 120px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+  }
+  header .designer-details-container p:nth-child(2) {
+    margin-top: 16px;
+    font-size: 1.55em;
+    letter-spacing: 1.2px;
+  }
+  main {
+    width: 90%;
+  }
+  .images-section {
+    width: 100%;
+    margin: 80px auto 128px;
+    row-gap: 10px;
+  }
+  .images-section div {
+    width: 100%;
+  }
+  #big-names {
+    font-size: 1.6em;
+    margin-top: -74px;
+  }
+  .logos-section {
+    flex-direction: column;
+    row-gap: 60px;
+    margin: 60px auto 140px;
+  }
+  .logo-image-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo-image-container #adidas {
+    width: 60%;
+  }
+  .horizontal-break {
+    margin: 0 auto;
+  }
+  .horizontal-break p:first-child {
+    margin-right: 25px;
+  }
+  .fonts-container {
+    margin-top: 40px;
+  }
+  .icon {
+    font-size: 22px;
+    margin: 0 4px;
+  }
+  #coded {
+    margin: 48px 0 0;
+    font-weight: 400;
+    font-size: 17px;
+  }
+}
+
+/*# sourceMappingURL=newstyles.css.map */
