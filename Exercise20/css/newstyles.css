@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Lato", sans-serif;
+}
+
+.flex-sb-c, .new-note-modal-container .new-note-modal .colors-button-container, .new-note-modal-container .new-note-modal header, .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.violet-button, .new-note-modal-container .new-note-modal .colors-button-container .add-button, .main-header .new-button {
+  background-color: rgb(167, 90, 178);
+  padding: 10px 40px;
+}
+
+.cursor-pointer:hover, .new-note-modal-container .new-note-modal .colors-button-container .add-button:hover, .new-note-modal-container .new-note-modal .colors-button-container .colors-container .circle:hover, .new-note-modal-container .new-note-modal header .fa-xmark:hover, button:hover {
+  cursor: pointer;
+}
+
+.main-header {
+  background-color: rgb(10, 28, 45);
+  color: white;
+  height: 88px;
+  padding: 0 36px;
+  position: sticky;
+  top: 0;
+}
+.main-header h1 {
+  font-weight: 300;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-family: "Roboto Slab", serif;
+}
+.main-header h1 span {
+  font-weight: 500;
+}
+.main-header .delete-button {
+  background-color: rgb(154, 30, 19);
+  padding: 10px 34px;
+  margin: 0 10px;
+  display: none;
+}
+button {
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 40px;
+}
+
+.empty-page {
+  width: 50%;
+  margin: 130px auto 0;
+}
+.empty-page div {
+  width: 160px;
+  margin: 0 auto;
+}
+.empty-page div img {
+  width: 100%;
+  height: 100%;
+}
+.empty-page p {
+  margin-top: 28px;
+  text-align: center;
+  color: #b2b2b2;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 65.2%;
+  background-color: rgba(6, 20, 31, 0.7);
+}
+
+.new-note-modal-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34.8%;
+  height: 100vh;
+  background-color: black;
+}
+.new-note-modal-container .new-note-modal {
+  width: 85%;
+  margin: 50px auto 40px;
+  color: white;
+}
+.new-note-modal-container .new-note-modal header {
+  height: 52px;
+  padding: 18px;
+  background-color: rgb(10, 28, 45);
+}
+.new-note-modal-container .new-note-modal header .fa-xmark {
+  color: rgb(153, 153, 153);
+}
+.new-note-modal-container .new-note-modal form textarea {
+  font-family: "Lato", sans-serif;
+  background: none;
+  outline: none;
+  resize: none;
+  border: none;
+  width: 100%;
+  color: white;
+}
+.new-note-modal-container .new-note-modal form textarea::placeholder {
+  color: rgb(107, 107, 107);
+}
+.new-note-modal-container .new-note-modal form textarea[name=notesTitle] {
+  font-size: 26px;
+  margin: 26px 0 0;
+}
+.new-note-modal-container .new-note-modal form textarea[name=imageUrl], .new-note-modal-container .new-note-modal form textarea[name=content] {
+  font-size: 16px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container {
+  margin-top: 32px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container span {
+  position: relative;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .circle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .purple {
+  background-color: rgb(230, 205, 235);
+  margin: 0 4px 0 0;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .white {
+  background-color: rgb(252, 252, 252);
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .yellow {
+  background-color: rgb(247, 204, 127);
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .green {
+  background-color: rgb(230, 237, 156);
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .red {
+  background-color: rgb(242, 171, 144);
+  margin: 0 0 0 4px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .colors-container .fa-check {
+  color: black;
+  font-size: 26px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .add-button {
+  margin-left: 20px;
+}
+
+.all-notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 81%;
+  margin: 50px auto 0;
+}
+
+.note-container {
+  width: 316px;
+  height: 416px;
+  background-color: rgb(230, 205, 235);
+  border-radius: 5px;
+  margin: 0 16.9px 34.8px;
+}
+.note-container .note {
+  width: 86%;
+  height: 96%;
+  margin: 0 auto;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.note-container .note .note-title {
+  font-size: 26px;
+  font-weight: 400;
+}
+.note-container .note p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.note-container .note .note-date {
+  margin-top: 6px;
+  color: rgb(79, 64, 48);
+  font-size: 13px;
+  font-weight: 500;
+}
+.note-container .note .note-image-container {
+  margin: 20px 0px;
+  width: 100%;
+  height: 160px;
+}
+.note-container .note .note-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.note-container .note .note-content {
+  color: rgb(39, 39, 25);
+}
+
+/*# sourceMappingURL=newstyles.css.map */
