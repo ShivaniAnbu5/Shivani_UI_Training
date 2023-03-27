@@ -1,0 +1,198 @@
+*{
+    margin:0;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+  background-image: linear-gradient(rgba(248, 152, 97, 0.40),rgba(248, 152, 97, 0.40)),url('../images/bg.jpg');
+  background-position: top center;
+}
+
+/*************************************** STYLES FOR DUST DIVISION ***************************************/
+.dust1{
+    opacity: 1;
+    width: 220%;
+    height: 700px;
+    position: absolute;
+    top:0;
+    animation: dustFly 20s ease 7s normal forwards;
+    transform: rotateY(180deg);
+}
+
+.dust2{
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+}
+
+/****************************************** ANIMATION FOR DUST ******************************************/
+@keyframes dustFly{
+    from{
+        left:0px;
+    }
+    to{
+        left:-1950px;
+    }
+}
+
+.dust1 img,.dust2 img{
+    width:100%;
+    height: 100%;
+    transform: rotateX(180deg);
+}
+
+/*************************************** STYLES FOR TUMBLEWEEDS ***************************************/
+.tumbleweed{
+    position: absolute;
+}
+
+.tw1{
+    top:750px;
+    left:1750px;
+    width:100px;
+    animation-name: flyWithTornado;
+    animation-delay: 10s;
+    animation-duration:11s;
+    animation-fill-mode: forwards;
+}
+@keyframes flyWithTornado {
+    0%{
+        top:750px;
+        left:1750px;
+        transform: rotateZ(0deg);  
+    }
+    20%{
+        left:1050px;
+    }
+    40%{
+        top:550px;
+        left:1150px;
+        width:60px;
+        z-index: 1;
+    }
+    42%{
+        z-index: 0;
+    }
+    47%{
+        top:350px;
+        left:750px;
+    }
+    50%{
+        top:450px;
+        left:350px;
+        z-index: 0;
+    }
+    60%{
+        z-index: 1;
+    }
+    65%{
+        top:450px;
+        left:750px;
+    }
+    85%{
+        left:100px;
+        z-index: 0;
+    }
+
+    100%{
+        top:500px;
+        left:-450px;
+        transform: rotateZ(-930deg);
+    }
+}
+
+.tw2,.tw3,.tw4{
+    left:1750px;
+    animation-name: fly;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.tw2{
+    top:790px;
+    width:80px;
+    animation-duration:10s;
+    animation-delay: 1s;  
+}
+
+.tw3{
+    top:750px;
+    width:180px;
+    animation-duration:18s;
+    animation-delay: 2s;
+}
+
+.tw4{
+    top:780px;
+    width:290px;
+    animation-duration:19s;
+}
+
+@keyframes fly {
+    from{
+        left:1750px;
+        transform: rotateZ(0deg);
+        
+    }
+    to{
+        left:-350px;
+        transform: rotateZ(-930deg);
+    }
+}
+
+/****************************************** STYLES FOR TORNADO ******************************************/
+.tornado{
+    position: absolute;
+    left:1600px;
+    top:-1750px;
+    width:650px;
+    animation-name: tornadoRotate;
+    animation-delay: 5s;
+    animation-duration: 18s;
+}
+
+.tornado img{
+    width:100%;
+    height: 100%;
+}
+
+@keyframes tornadoRotate {
+    0%{
+        left:2100px;
+        top:-100px;
+        width:300px;
+    }
+    20%{
+        left:1600px;
+        top:-75px;
+        width:350px;
+    }
+    40%{
+        left:1100px;
+        top:-50px;
+        width:400px;
+    }
+    50%{
+        top:-25px;
+        left:800px;
+        width:450px;
+    }
+    65%{
+        top:0px;
+        left:400px;
+        width:500px;
+    }
+    80%{
+        left:0px;
+        top:25px;
+        width:525px;
+    }
+    100%{
+        left:-1050px;
+        top:50px;
+        width:550px;
+    }
+}
