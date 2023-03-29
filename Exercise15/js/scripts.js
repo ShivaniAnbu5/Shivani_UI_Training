@@ -3,7 +3,7 @@ fetch("./data/video.json")
     .then(data => data.json())
     .then(data => {
         
-        var output =  document.getElementsByClassName("desc-comments")[0];
+        var output =  document.getElementsByClassName("description-comments")[0];
 
         var videoContainer = document.getElementsByClassName("video-container")[0];
         var video = document.createElement("video");
@@ -12,7 +12,7 @@ fetch("./data/video.json")
         video.setAttribute("width","100%");
         video.setAttribute("poster","./images/sprite-fright.png");
         videoContainer.appendChild(video);
-        output.append(videoContainer);
+        output.appendChild(videoContainer);
 
 
         var titleDescContainer = document.createElement("div");
