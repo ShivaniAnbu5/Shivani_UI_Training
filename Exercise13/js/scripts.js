@@ -1,4 +1,3 @@
-// export const friends = 
 let friends = [
     {
     "first_name": "Mehetabel",
