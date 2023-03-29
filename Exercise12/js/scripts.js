@@ -9,7 +9,6 @@ var circle = document.querySelector(".circle");
 var triangle = document.querySelector(".triangle");
 var square = document.querySelector(".square");
 
-var tickIcon = document.querySelector(".circleIcon");
 var nextButton = document.querySelector(".next-button");
 var calculateButton = document.querySelector(".calculate-button");
 var startButton = document.querySelector(".start-button");
