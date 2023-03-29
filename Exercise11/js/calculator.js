@@ -13,8 +13,8 @@ calculator = {
     },
 }
 
-var value1 = parseInt(prompt("Enter value 1: "));
-while(isNaN(value1)){
+var value1 = parseInt(prompt("Enter value 1(>0): "));
+while(isNaN(value1) || (value1<=0)){
     value1 = parseInt(prompt("Enter a valid value 1: "));
 }
 var value2 = parseInt(prompt("Enter value 2(>0): "));
