@@ -30,10 +30,22 @@ header{
     padding: 0 30px;
 }
 
-header h1{
-    font-size: 20px;
-    letter-spacing: 1px;
+nav{
+    width: 100%;
 }
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li{
+    font-size: 19px;
+    letter-spacing: 1px;
+    list-style: none;
+    font-weight: bold;
+}
+
 /************************** STYLES FOR HEADER ENDS HERE **************************/
 
 /************************** STYLES FOR SECTIONS STARTS HERE **************************/
@@ -49,10 +61,11 @@ header h1{
     margin:14% 0;
 }
 
-.shape-section h1,.value-section h1,.result-section h1{
+.shape-section p,.value-section p,.result-section p{
     color: #ffffff;
     font-size: 50px;
     font-weight: 400;
+    
 }
 
 .circle,.triangle,.square{
@@ -106,6 +119,8 @@ header h1{
     color: #ffffff;
     font-size: 30px;
     padding:0 20px;
+    text-align: center;
+    outline: none;
 }
 
 .next-button,.calculate-button,.start-button{

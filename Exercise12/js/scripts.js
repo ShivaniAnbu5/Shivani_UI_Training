@@ -110,6 +110,7 @@ nextButton.addEventListener("click",()=>{
 calculateButton.addEventListener("click",()=>{
     valueSection.style.display = "none";
     resultSection.style.display = "block";
+    document.querySelector("#result-shape").setAttribute("class",shapeObject.selectedShape);
     for(let shape of shapes){
         if(shape.shapeName == shapeObject.selectedShape){
             resultHeading.innerHTML = shape.shapeResultHeading;
