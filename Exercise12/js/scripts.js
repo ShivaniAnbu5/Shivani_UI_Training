@@ -26,7 +26,6 @@ const icon = document.createElement("i");
 // OBJECT TO STORE IN SESSION STORAGE
 var shapeObject={
     selectedShape:"",
-    inputValue:"",
 }
 
 // IF THE OBJECT IS NOT NULL,THEN GET THAT AND ASSIGN
@@ -38,7 +37,6 @@ if(sessionStorage.getItem("shapeObject") != null){
  
     shapeObject={
         selectedShape: object.selectedShape,
-        givenValue: object.givenValue,
     }
 }
 
@@ -91,7 +89,6 @@ shapesContainer.addEventListener("click",(event)=>{
         document.getElementsByClassName(shapeName)[0].appendChild(icon);
     } 
     nextButton.style.display = "inline";
-    shapesSection.appendChild(nextButton);
     shapeObject.selectedShape = shapeName;
     sessionStorage.setItem("shapeObject",JSON.stringify(shapeObject));
 });
@@ -108,14 +105,6 @@ nextButton.addEventListener("click",()=>{
         }
     }
     
-})
-
-// KEYUP EVENT LISTENER FOR THE INPUTBOX TO GET THE INPUT VALUE
-inputBox.addEventListener("keyup",()=>{
-    var inputvalue = inputBox.value;
-    shapeObject.inputValue = inputvalue;
-    sessionStorage.setItem("shapeObject",JSON.stringify(shapeObject));
-    inputNumber= parseInt(shapeObject.inputValue);
 })
 
 // CLICK EVENT LISTENER FOR THE CALCULATE BUTTON
