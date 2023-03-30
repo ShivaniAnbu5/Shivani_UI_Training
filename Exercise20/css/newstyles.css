@@ -9,18 +9,18 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.flex-sb-c, .new-note-modal-container .new-note-modal .colors-button-container, .new-note-modal-container .new-note-modal header, .main-header {
+.flex-sb-c, .delete-note-modal header, .editing-confirmation-note-modal header, .new-note-modal-container .new-note-modal .colors-button-container, .new-note-modal-container .new-note-modal header, .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.violet-button, .new-note-modal-container .new-note-modal .colors-button-container .add-button, .main-header .new-button {
+.violet-button, .edit-note-button, .delete-note-modal .confirmation-button, .editing-confirmation-note-modal .confirmation-button, .new-note-modal-container .new-note-modal .colors-button-container .add-button-style, .new-note-modal-container .new-note-modal .colors-button-container .add-button-enabled, .main-header .new-button {
   background-color: rgb(167, 90, 178);
   padding: 10px 40px;
 }
 
-.cursor-pointer:hover, .new-note-modal-container .new-note-modal .colors-button-container .add-button:hover, .new-note-modal-container .new-note-modal .colors-button-container .colors-container .circle:hover, .new-note-modal-container .new-note-modal header .fa-xmark:hover, button:hover {
+.cursor-pointer:hover, .delete-note-modal header .fa-xmark:hover, .editing-confirmation-note-modal header .fa-xmark:hover, .new-note-modal-container .new-note-modal .colors-button-container .add-button-enabled:hover, .new-note-modal-container .new-note-modal .colors-button-container .colors-container .circle:hover, .new-note-modal-container .new-note-modal header .fa-xmark:hover, button:hover {
   cursor: pointer;
 }
 
@@ -41,7 +41,7 @@ body {
 .main-header h1 span {
   font-weight: 500;
 }
-.main-header .delete-button {
+.main-header .delete-all-button {
   background-color: rgb(154, 30, 19);
   padding: 10px 34px;
   margin: 0 10px;
@@ -79,7 +79,7 @@ button {
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 65.2%;
+  width: 100%;
   background-color: rgba(6, 20, 31, 0.7);
 }
 
@@ -90,6 +90,7 @@ button {
   right: 0;
   width: 34.8%;
   height: 100vh;
+  z-index: 1;
   background-color: black;
 }
 .new-note-modal-container .new-note-modal {
@@ -123,6 +124,11 @@ button {
 }
 .new-note-modal-container .new-note-modal form textarea[name=imageUrl], .new-note-modal-container .new-note-modal form textarea[name=content] {
   font-size: 16px;
+}
+.new-note-modal-container .new-note-modal form .error {
+  margin-bottom: 20px;
+  color: #a4332c;
+  font-size: 12px;
 }
 .new-note-modal-container .new-note-modal .colors-button-container {
   margin-top: 32px;
@@ -161,8 +167,14 @@ button {
   top: 10px;
   left: 10px;
 }
-.new-note-modal-container .new-note-modal .colors-button-container .add-button {
+.new-note-modal-container .new-note-modal .colors-button-container .add-button-enabled {
   margin-left: 20px;
+}
+.new-note-modal-container .new-note-modal .colors-button-container .add-button-style {
+  cursor: initial;
+  margin-left: 20px;
+  color: rgb(125, 125, 125);
+  background-color: rgba(167, 90, 178, 0.5);
 }
 
 .all-notes-container {
@@ -216,6 +228,45 @@ button {
 }
 .note-container .note .note-content {
   color: rgb(39, 39, 25);
+}
+
+.delete-note-modal, .editing-confirmation-note-modal {
+  display: none;
+  position: absolute;
+  width: 605px;
+  height: 200px;
+  background-color: rgb(0, 0, 0);
+  left: 560px;
+  top: 400px;
+  text-align: center;
+  z-index: 2;
+}
+.delete-note-modal header, .editing-confirmation-note-modal header {
+  height: 52px;
+  width: 96%;
+  padding: 18px;
+  margin: 10px auto 0;
+  background-color: rgb(10, 28, 45);
+}
+.delete-note-modal header .fa-xmark, .editing-confirmation-note-modal header .fa-xmark {
+  color: rgb(153, 153, 153);
+}
+.delete-note-modal p, .editing-confirmation-note-modal p {
+  margin: 26px 0;
+  color: white;
+}
+.delete-note-modal .confirmation-button, .editing-confirmation-note-modal .confirmation-button {
+  margin: 0 auto;
+}
+
+.delete-particular-note-button {
+  background-color: rgb(154, 30, 19);
+  padding: 10px 34px;
+  margin: 0 10px;
+}
+
+.selected-note-container {
+  color: green;
 }
 
 /*# sourceMappingURL=newstyles.css.map */

@@ -16,7 +16,7 @@
     <header class="main-header">
         <h1>Pocket  <span>Notes</span> </h1>
         <div class="header-buttons-container">
-            <button class="delete-button">DELETE ALL</button>
+            <button class="delete-all-button">DELETE ALL</button>
             <button class="new-button">NEW</button>
         </div>
     </header>
@@ -42,8 +42,10 @@
 
                 <form action="">
                     <textarea name="notesTitle" id="" placeholder="Notes Title" rows="2"></textarea>
+                    <p class="error error-title"></p>
                     <textarea name="imageUrl" id="" rows="2" placeholder="Add Image URL"></textarea>
                     <textarea name="content" id="" rows="32" placeholder="Add Content Here"></textarea>
+                    <p class="error error-content"></p>
                 </form>
                 
                 <div class="colors-button-container">
@@ -55,10 +57,30 @@
                         <span class="circle red"></span>
                     </div>
                     
-                    <button class="add-button">ADD</button>
+                    <button class="add-button add-button-style">ADD</button>
                 </div>
                 
             </div>
+        </div>
+
+        <div class="delete-note-modal">
+            <header >
+                <p>CONFIRM DELETE</p>
+                <div class="close-icon-container"> <i class="fa-solid fa-xmark close-icon"></i></div>
+            </header>
+            <p class="delete-confirmation-msg"></p>
+
+            <button class="confirmation-button delete-conf-button">YES, DELETE</button>
+        </div>
+
+        <div class="editing-confirmation-note-modal">
+            <header >
+                <p>CONFIRM</p>
+                <div class="close-icon-container"> <i class="fa-solid fa-xmark close-icon editing-conf-close-icon"></i></div>
+            </header>
+            <p class="editing-confirmation-msg">Seems like you are in the middle of adding/editing content. Do you want to leave?</p>
+
+            <button class="confirmation-button editing-conf-button">YES, CLOSE</button>
         </div>
     </main>
 
