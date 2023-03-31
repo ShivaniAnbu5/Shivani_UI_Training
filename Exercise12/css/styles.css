@@ -185,7 +185,7 @@ table td{
     font-weight: 300;
 }
 
-tr .property{
+tr .shape-property{
     width:44%;
 }
 
@@ -197,7 +197,7 @@ tr .formula,.result{
     background-color: #4a5d7c;
 }
 
-tr .property,.resultBgColor{
+tr .shape-property,.resultBgColor{
     background-color: #2b60ce;
 }
 

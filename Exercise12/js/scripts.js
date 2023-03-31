@@ -16,7 +16,7 @@ const startButton = document.querySelector(".start-button");
 const valueHeading = document.querySelector(".value-heading");
 const resultHeading = document.querySelector(".result-heading");
 
-const property = document.querySelector(".property");
+const shapeProperty = document.querySelector(".shape-property");
 
 const inputBox = document.querySelector(".input-box");
 
@@ -79,13 +79,13 @@ const shapes = {
 
 
 // CLICK EVENT LISTENER FOR THE SHAPE CONTAINER
-shapesContainer.addEventListener("click",(event)=>{
+function shapesContainerClick(event){
     shapeName = event.target.className;
     document.querySelector("."+shapeName).appendChild(tick);
     nextButton.style.display = "inline";
     shapeObject.selectedShape = shapeName;
     sessionStorage.setItem("shapeObject",JSON.stringify(shapeObject));
-});
+};
 
 
 // CLICK EVENT LISTENER FOR THE NEXT BUTTON
@@ -103,7 +103,7 @@ function calculateButtonClick(){
     document.querySelector("#result-shape").setAttribute("class",shapeName);
 
     resultHeading.innerHTML = shapes[shapeName].shapeResultHeading;
-    property.innerHTML = shapes[shapeName].property1;
+    shapeProperty.innerHTML = shapes[shapeName].property1;
     inputvalue = inputBox.value;
 
     document.querySelector(".formula").innerHTML = shapes[shapeName].formula;

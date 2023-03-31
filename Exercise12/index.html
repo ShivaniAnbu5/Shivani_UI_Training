@@ -37,7 +37,7 @@
     <!---------------------------------- SHAPE SECTION STARTS HERE ---------------------------------->
     <section class="shape-section">
       <span>1. Choose a Shape</span>
-      <div class="shapes-container">
+      <div class="shapes-container" onclick="shapesContainerClick(event)">
         <div class="circle"></div>
         <div class="triangle">
           <div class="triangleContent"></div>
@@ -62,17 +62,17 @@
         <span class="result-heading"></span>
         <table>
           <tr>
-            <td class="property"></td>
+            <td class="shape-property"></td>
             <td class="formula formulaBgColor"></td>
             <td class="result1 resultBgColor"></td>
           </tr>
           <tr>
-            <td class="property">AREA</td>
+            <td class="shape-property">AREA</td>
             <td class="area-formula formulaBgColor"></td>
             <td class="result2 resultBgColor"></td>
           </tr>
           <tr>
-            <td class="property">PERIMETER</td>
+            <td class="shape-property">PERIMETER</td>
             <td class="perimeter-formula formulaBgColor"></td>
             <td class="result3 resultBgColor"></td>
           </tr>
