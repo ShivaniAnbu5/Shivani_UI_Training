@@ -150,6 +150,10 @@ table{
     margin:0 auto;
 }
 
+tr{
+    height: 40px;
+}
+
 td{
     font-size: 11px;
     height: 34px;
