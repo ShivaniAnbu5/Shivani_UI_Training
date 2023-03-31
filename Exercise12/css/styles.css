@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+/************************** STYLES TO REMOVE ARROW IN INPUT **************************/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/************************** STYLES FOR BODY STARTS HERE **************************/
+body{
+    background-color: #000;
+    font-family: "Roboto" , sans-serif;
+}
+
+/************************** STYLES FOR HEADER STARTS HERE **************************/
+header{
+    background-color: #b5df91;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+}
+
+nav{
+    width: 100%;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li{
+    font-size: 19px;
+    letter-spacing: 1px;
+    list-style: none;
+    font-weight: bold;
+}
+
+li a{
+    color:#000000;
+    text-decoration: none;
+}
+/************************** STYLES FOR HEADER ENDS HERE **************************/
+
+/************************** STYLES FOR SECTIONS STARTS HERE **************************/
+.shape-section,.value-section,.result-section{
+    width: 50%;
+    margin: 15% auto;
+    text-align: center;
+}
+
+.shapes-container{
+    width:88%;
+    display: flex;
+    justify-content: space-evenly;
+    margin:10% auto;
+}
+
+.shape-section span,.value-section span,.result-section span{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    
+}
+
+.circle,.triangle,.square{
+    cursor: pointer;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background-color: #43967e;
+  border-radius: 50%;
+}
+
+.triangleContent{
+	width: 0;
+	height: 0;
+	border-left: 85px solid transparent;
+	border-right: 85px solid transparent;
+	border-bottom: 150px solid #f3aeda;;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+  background-color: #e0e0e0;
+}
+
+#tick{
+    height: 54px;
+    width: 26px;
+    border-bottom: 2.5px solid #ffffff;
+    border-right: 2.5px solid #ffffff;
+    transform: rotateZ(42deg);
+    margin: 35px auto 0;
+}
+
+.triangle{
+    position: relative;
+}
+
+.triangle #tick{
+    position: absolute;
+    top:30px;
+    left:68px;
+}
+
+.value-section{
+    margin-top: 18%;
+    display: none;
+}
+
+.input-box{
+    border: 2px solid #ffffff;
+    background-color: #000;
+    width:85%;
+    height: 90px;
+    margin:56px 0;
+    color: #ffffff;
+    font-size: 30px;
+    padding:0 20px;
+    text-align: center;
+    outline: none;
+}
+
+.next-button,.calculate-button,.start-button{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding:14px 82px;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.next-button{
+    display: none;
+}
+
+.calculate-button{
+    padding:14px 46px;
+}
+
+.start-button{
+    padding:14px 38px;
+}
+
+.next-button:hover,.calculate-button:hover,.start-button:hover{
+    cursor: pointer;
+}
+
+.result-section{
+    margin: 10% auto;
+    display: none;
+}
+
+.result-section div{
+    margin:0 auto 5%;
+}
+
+table {
+    color:#ffffff;
+    margin:0 auto;
+    width: 54%;
+    border-spacing: 0px 20px;
+    margin-bottom: 9%;
+    text-align: left;
+}
+
+table td{
+    font-size: 18px;
+    padding: 12px 16px;
+    font-weight: 300;
+}
+
+tr .shape-property{
+    width:44%;
+}
+
+tr .formula,.result{
+    width:28%;
+}
+
+.formulaBgColor{
+    background-color: #4a5d7c;
+}
+
+tr .shape-property,.resultBgColor{
+    background-color: #2b60ce;
+}
+
+/************************** STYLES FOR SECTIONS ENDS HERE **************************/
+
