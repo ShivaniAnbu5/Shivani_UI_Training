@@ -1,0 +1,33 @@
+header{
+    @include flex(normal,normal,column);
+
+    .designer-email-container p{
+        font-weight: 900;
+        font-size: 2em;
+        text-align: end;
+    }
+
+    .designer-details-container{
+        margin-top: 120px;
+
+        p:nth-child(1){
+            text-align: center;
+            font-size: 11.1em;
+            font-weight: lighter;
+            span{
+                 font-weight: 900;
+            }
+        }
+
+        p:nth-child(2){
+            text-align: center;
+            font-weight: 700;
+            color: $textColor;
+            margin-top: 10px;
+            font-size: 3.125em;
+            span{
+                color: #5b8edc;
+            }
+        }       
+    }
+}

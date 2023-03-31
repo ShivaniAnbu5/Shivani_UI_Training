@@ -1,0 +1,24 @@
+.logos-section{
+    @include flex(space-between,normal,normal);
+    width: 79%;
+    margin: 80px auto 0;
+}
+
+.logo-image-container{
+    @include flex(space-around,center,normal);
+    width: 30%;
+
+    div{
+       text-align: center;
+        width: 35%;
+        height: 60%;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    #montBlanc-image{
+        width: 80%;
+    }
+}
