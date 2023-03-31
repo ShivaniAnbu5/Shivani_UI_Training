@@ -1,0 +1,79 @@
+
+@media screen and (max-width:475px){
+    header{
+        @include flex(normal,normal,column-reverse);
+        .designer-email-container p{
+            margin: 10px 0 0;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        .designer-details-container{
+            margin-top: 0px;
+            p:nth-child(1){
+                margin-top: 120px;
+                font-size: 2.5em;
+                letter-spacing: 2px;
+            }
+            p:nth-child(2){
+                margin-top: 16px;
+                font-size: 1.55em;
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+    
+    main{
+        width: 90%;
+    }
+    
+    .images-section{
+        width: 100%;
+        margin: 80px auto 128px;
+        row-gap: 10px;
+        div{
+            width: 100%;
+        }
+    }
+    
+    #big-names{
+        font-size: 1.6em;
+        margin-top: -74px;
+    }
+    
+    .logos-section{
+        flex-direction: column;
+        row-gap: 60px;
+        margin: 60px auto 140px;
+    }
+    
+    .logo-image-container{
+        width: 100%;
+        justify-content: space-between;
+        #adidas{
+            width: 60%;
+        }
+    }
+    
+    .horizontal-break{
+        margin:0 auto;
+        p:first-child{
+            margin-right: 25px;
+        }
+    }
+    
+    .fonts-container{
+        margin-top: 40px;
+    }
+    
+    .icon{
+        font-size: 22px;
+        margin: 0 4px;
+    }
+    
+    #coded{
+        margin: 48px 0 0;
+        font-weight: 400;
+        font-size: 17px;
+    }
+    }

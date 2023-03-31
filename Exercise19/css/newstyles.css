@@ -21,13 +21,10 @@ main {
 }
 
 /*********************************** STYLES FOR HEADER ***********************************/
-.flex-jc, .logos-section, .images-section {
-  display: flex;
-  justify-content: space-between;
-}
-
 header {
   display: flex;
+  justify-content: normal;
+  align-items: normal;
   flex-direction: column;
 }
 header .designer-email-container p {
@@ -59,6 +56,10 @@ header .designer-details-container p:nth-child(2) span {
 
 /************************* STYLES FOR IMAGE SECTION STARTS HERE*************************/
 .images-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  flex-direction: normal;
   margin-top: 160px;
   flex-wrap: wrap;
   row-gap: 28px;
@@ -81,15 +82,20 @@ header .designer-details-container p:nth-child(2) span {
 
 /************************* STYLES FOR LOGO SECTION STARTS HERE*************************/
 .logos-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  flex-direction: normal;
   width: 79%;
-  margin: 80px 168px 0;
+  margin: 80px auto 0;
 }
 
 .logo-image-container {
   display: flex;
-  width: 30%;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
+  flex-direction: normal;
+  width: 30%;
 }
 .logo-image-container div {
   text-align: center;
@@ -100,16 +106,18 @@ header .designer-details-container p:nth-child(2) span {
   height: 100%;
   object-fit: contain;
 }
-.logo-image-container #last-image {
+.logo-image-container #montBlanc-image {
   width: 80%;
 }
 
 /************************* STYLES FOR LOGO SECTION ENDS HERE*************************/
 .horizontal-break {
   display: flex;
-  width: 50%;
-  margin: 320px 350px 0;
   justify-content: center;
+  align-items: normal;
+  flex-direction: normal;
+  width: 50%;
+  margin: 320px auto 0;
 }
 .horizontal-break p {
   border-bottom: 1px solid #ffffff;
@@ -157,6 +165,8 @@ header .designer-details-container p:nth-child(2) span {
 @media screen and (max-width: 475px) {
   header {
     display: flex;
+    justify-content: normal;
+    align-items: normal;
     flex-direction: column-reverse;
   }
   header .designer-email-container p {

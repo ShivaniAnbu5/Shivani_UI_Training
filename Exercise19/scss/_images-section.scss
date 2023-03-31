@@ -1,0 +1,10 @@
+.images-section{
+    @include flex(space-between,normal,normal);
+    margin-top: 160px;
+    flex-wrap: wrap;
+    row-gap: 28px;
+
+    div{
+        width: 31.7%;
+    }
+}
