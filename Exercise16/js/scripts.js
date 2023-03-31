@@ -34,6 +34,7 @@ function DoBanking(){
       ];
 
     var userAccount,enteredPin;
+
     function validateCardNumber(cardNumber,pin){
         let flag = false;
         for(let temp of userAccounts){
@@ -45,7 +46,7 @@ function DoBanking(){
             }
             if(flag) break;
         }
-        if(!flag){
+        if(flag==false){
             alert("Invalid Card Number!");
         }
     }
@@ -54,33 +55,33 @@ function DoBanking(){
         let option = prompt("Do you want to withdraw(1) or deposit(2)?");
 
         function withdraw(){
-                    if(userAccount.pin == enteredPin){
-                        alert("Current account balance: "+userAccount.accountBalance);
-                        let amount = prompt("Enter the amount you want to withdraw");
-                        if(amount < userAccount.accountBalance){
-                            userAccount.accountBalance -= amount;
-                            alert("Amount withdrawn: "+amount+" Account balance: "+userAccount.accountBalance);
-                        }
-                        else{
-                            alert("Insufficient Account Balance!");
-                        }
-                    }
+            if(userAccount.pin == enteredPin){
+                alert("Current account balance: "+userAccount.accountBalance);
+                let amount = prompt("Enter the amount you want to withdraw");
+                if(amount < userAccount.accountBalance){
+                    userAccount.accountBalance -= amount;
+                    alert("Amount withdrawn: "+amount+" Account balance: "+userAccount.accountBalance);
+                }
+                else{
+                    alert("Insufficient Account Balance!");
+                }
+            }
             else{
                 alert("Invalid pin!");
             }
         }       
     
         function deposit(){
-                    if(userAccount.pin == enteredPin){
-                        alert("Current account balance: "+userAccount.accountBalance);
-                        let amount = prompt("Enter the amount you want to deposit");
-                        userAccount.accountBalance +=  parseInt(amount);
-                        alert("Amount deposited: "+amount+" Account balance: "+userAccount.accountBalance);
-                    }
-                else{
-                    alert("Invalid pin!");
-                }
+            if(userAccount.pin == enteredPin){
+                alert("Current account balance: "+userAccount.accountBalance);
+                let amount = prompt("Enter the amount you want to deposit");
+                userAccount.accountBalance +=  parseInt(amount);
+                alert("Amount deposited: "+amount+" Account balance: "+userAccount.accountBalance);
             }
+            else{
+                alert("Invalid pin!");
+            }
+        }
 
 
 
@@ -94,6 +95,8 @@ function DoBanking(){
 }
 
 const banking = DoBanking();
+
+banking(8562234567391234,5565);
 
 banking(8562234567391234,5565);
 
