@@ -93,16 +93,19 @@ header ul li{
   background-color: #e0e0e0;
 }
 
-.icon{
-    color: #ffffff;
-    font-size: 40px;
-    margin-top: 35%;
+#tick{
+    height: 54px;
+    width: 26px;
+    border-bottom: 2.5px solid white;
+    border-right: 2.5px solid white;
+    transform: rotateZ(42deg);
+    margin: 35px auto 0;
 }
 
-.triangleIcon{
-    position: absolute;
-    top:-70px;
-    left:845px;
+.triangle #tick{
+    position: relative;
+    top:30px;
+    right: 16px;
 }
 
 .value-section{
@@ -158,7 +161,7 @@ header ul li{
     margin:auto;
 }
 
-.result-section h1{
+.result-section p{
     margin-top:5%;
 }
 
@@ -194,3 +197,4 @@ tr .property,.resultBgColor{
 }
 
 /************************** STYLES FOR SECTIONS ENDS HERE **************************/
+

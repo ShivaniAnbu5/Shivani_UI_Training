@@ -1,26 +1,27 @@
 // ELEMENT SELECTORS
-var shapesSection = document.querySelector(".shape-section");
-var valueSection = document.querySelector(".value-section");
-var resultSection = document.querySelector(".result-section");
+const shapesSection = document.querySelector(".shape-section");
+const valueSection = document.querySelector(".value-section");
+const resultSection = document.querySelector(".result-section");
 
-var shapesContainer= document.querySelector(".shapes-container");
+const shapesContainer= document.querySelector(".shapes-container");
 
-var circle = document.querySelector(".circle");
-var triangle = document.querySelector(".triangle");
-var square = document.querySelector(".square");
+const circle = document.querySelector(".circle");
+const triangle = document.querySelector(".triangle");
+const square = document.querySelector(".square");
 
-var nextButton = document.querySelector(".next-button");
-var calculateButton = document.querySelector(".calculate-button");
-var startButton = document.querySelector(".start-button");
+const nextButton = document.querySelector(".next-button");
+const calculateButton = document.querySelector(".calculate-button");
+const startButton = document.querySelector(".start-button");
 
-var valueHeading = document.querySelector(".value-heading");
-var resultHeading = document.querySelector(".result-heading");
+const valueHeading = document.querySelector(".value-heading");
+const resultHeading = document.querySelector(".result-heading");
 
-var property = document.querySelector(".property");
+const property = document.querySelector(".property");
 
-var inputBox = document.querySelector(".input-box");
+const inputBox = document.querySelector(".input-box");
 
-const icon = document.createElement("i");
+const tick = document.createElement("div");
+tick.setAttribute("id","tick");
 
 // OBJECT TO STORE IN SESSION STORAGE
 var shapeObject={
@@ -29,10 +30,10 @@ var shapeObject={
 
 // IF THE OBJECT IS NOT NULL,THEN GET THAT AND ASSIGN
 if(sessionStorage.getItem("shapeObject") != null){
-    var object = JSON.parse(sessionStorage.getItem("shapeObject"));
+    const object = JSON.parse(sessionStorage.getItem("shapeObject"));
     nextButton.style.display = "inline";
-    icon.setAttribute("class","fa-solid fa-check icon "+object.selectedShape+"Icon");
-    document.getElementsByClassName(object.selectedShape)[0].appendChild(icon);
+
+    document.getElementsByClassName(object.selectedShape)[0].appendChild(tick);
  
     shapeObject={
         selectedShape: object.selectedShape,
@@ -41,7 +42,7 @@ if(sessionStorage.getItem("shapeObject") != null){
 
 // ARRAY OF OBJECTS CONTAINING THE SHAPES
 const shapes = [
-   circle = {
+   {
         shapeNo : 1,
         shapeName : "circle",
         shapeInputText : "2. Enter radius",
@@ -53,7 +54,7 @@ const shapes = [
         getArea: (value) => 3.14 * value * value,
         getPerimeter: (value) => 2 * 3.14 * value,
     },
-    triangle = {
+    {
         shapeNo : 2,
         shapeName : "triangle",
         shapeInputText : "2. Enter Side(Base & Height)",
@@ -65,7 +66,7 @@ const shapes = [
         getArea: (value) => 0.433 * value * value,
         getPerimeter: (value) => 3 * value,
     },
-    square = {
+    {
         shapeNo : 3,
         shapeName : "square",
         shapeInputText : "2. Enter side",
@@ -81,12 +82,9 @@ const shapes = [
 
 // CLICK EVENT LISTENER FOR THE SHAPE CONTAINER
 shapesContainer.addEventListener("click",(event)=>{
-    var shapeName = event.target.className;
+    const shapeName = event.target.className;
     const parentNode = document.getElementsByClassName(shapeName)[0];
-    if(!parentNode.contains(icon)){
-        icon.setAttribute("class","fa-solid fa-check icon "+shapeName+"Icon");
-        document.getElementsByClassName(shapeName)[0].appendChild(icon);
-    } 
+    document.getElementsByClassName(shapeName)[0].appendChild(tick);
     nextButton.style.display = "inline";
     shapeObject.selectedShape = shapeName;
     sessionStorage.setItem("shapeObject",JSON.stringify(shapeObject));
@@ -94,7 +92,7 @@ shapesContainer.addEventListener("click",(event)=>{
 
 
 // CLICK EVENT LISTENER FOR THE NEXT BUTTON
-nextButton.addEventListener("click",()=>{
+function nextButtonClick(){
     shapesSection.style.display = "none";
     valueSection.style.display = "block";  
     for(let shape of shapes){
@@ -103,11 +101,10 @@ nextButton.addEventListener("click",()=>{
             break;
         }
     }
-    
-})
+}
 
 // CLICK EVENT LISTENER FOR THE CALCULATE BUTTON
-calculateButton.addEventListener("click",()=>{
+function calculateButtonClick(){
     valueSection.style.display = "none";
     resultSection.style.display = "block";
     document.querySelector("#result-shape").setAttribute("class",shapeObject.selectedShape);
@@ -128,17 +125,17 @@ calculateButton.addEventListener("click",()=>{
             break;
         }
     }
-
-})
+}
 
 // CLICK EVENT LISTENER FOR THE START AGAIN BUTTON
-startButton.addEventListener("click",()=>{
+function startButtonClick(){
     shapesSection.style.display = "block";
     resultSection.style.display = "none";
     nextButton.style.display = "none";
 
-    document.getElementsByClassName(shapeObject.selectedShape)[0].removeChild(icon);
+    document.getElementsByClassName(shapeObject.selectedShape)[0].removeChild(tick);
+
     inputBox.value = "";
 
     sessionStorage.removeItem("shapeObject");
-})
+}
