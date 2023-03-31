@@ -21,25 +21,9 @@ main {
 }
 
 /*********************************** STYLES FOR HEADER ***********************************/
-.fw-600, #coded {
-  font-weight: 600;
-}
-
-.fw-700, #big-names, header .designer-details-container p:nth-child(2) {
-  font-weight: 700;
-}
-
-.fw-900, header .designer-details-container p:nth-child(1) span, header .designer-email-container p {
-  font-weight: 900;
-}
-
 .flex-jc, .logos-section, .images-section {
   display: flex;
   justify-content: space-between;
-}
-
-.text-align-center, #coded, .fonts-container, .logo-image-container div, #big-names, header .designer-details-container p:nth-child(2), header .designer-details-container p:nth-child(1) {
-  text-align: center;
 }
 
 header {
@@ -47,6 +31,7 @@ header {
   flex-direction: column;
 }
 header .designer-email-container p {
+  font-weight: 900;
   font-size: 2em;
   text-align: end;
 }
@@ -54,10 +39,16 @@ header .designer-details-container {
   margin-top: 120px;
 }
 header .designer-details-container p:nth-child(1) {
+  text-align: center;
   font-size: 11.1em;
   font-weight: lighter;
 }
+header .designer-details-container p:nth-child(1) span {
+  font-weight: 900;
+}
 header .designer-details-container p:nth-child(2) {
+  text-align: center;
+  font-weight: 700;
   color: #cecece;
   margin-top: 10px;
   font-size: 3.125em;
@@ -78,6 +69,8 @@ header .designer-details-container p:nth-child(2) span {
 
 /************************* STYLES FOR IMAGE SECTION ENDS HERE *************************/
 #big-names {
+  text-align: center;
+  font-weight: 700;
   color: #cecece;
   margin-top: 139px;
   font-size: 3.25em;
@@ -99,6 +92,7 @@ header .designer-details-container p:nth-child(2) span {
   justify-content: space-around;
 }
 .logo-image-container div {
+  text-align: center;
   width: 35%;
   height: 60%;
 }
@@ -130,6 +124,7 @@ header .designer-details-container p:nth-child(2) span {
 
 /************************* STYLES FOR FONT CONTAINER STARTS HERE *************************/
 .fonts-container {
+  text-align: center;
   margin-top: 118px;
 }
 
@@ -151,6 +146,8 @@ header .designer-details-container p:nth-child(2) span {
 
 /************************* STYLES FOR FONT CONTAINER ENDS HERE *************************/
 #coded {
+  font-weight: 600;
+  text-align: center;
   margin: 80px 0 144px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
