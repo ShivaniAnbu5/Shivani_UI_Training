@@ -26,8 +26,8 @@
     <header>
       <nav>
         <ul>
-          <li>MATH KIDS</li>
-          <li>KIDS LEARNING APP</li>
+          <li> <a href="#">MATH KIDS</a> </li>
+          <li> <a href="#">KIDS LEARNING APP</a> </li>
         </ul>
       </nav>
 
@@ -36,12 +36,14 @@
 
     <!---------------------------------- SHAPE SECTION STARTS HERE ---------------------------------->
     <section class="shape-section">
-      <p>1. Choose a Shape</p>
+      <span>1. Choose a Shape</span>
       <div class="shapes-container">
-        <div class="circle">
-        </div>
+        <div class="circle"></div>
 
-          <div class="triangle"> </div>
+        <div class="triangle">
+          <div class="triangleContent"></div>
+        </div>
+       
 
         <div class="square"></div>
       </div>
@@ -53,8 +55,8 @@
 
     <!---------------------------------- VALUE SECTION STARTS HERE ---------------------------------->
     <section class="value-section">
-        <p class="value-heading"></p>
-        <input type="number" class="input-box" autofocus />
+        <span class="value-heading"></span>
+        <input type="number" class="input-box"/>
         <button class="calculate-button" onclick="calculateButtonClick()">CALCULATE</button>
     </section>
     <!---------------------------------- VALUE SECTION ENDS HERE ---------------------------------->
@@ -62,7 +64,7 @@
     <!---------------------------------- RESULT SECTION STARTS HERE ---------------------------------->
     <section class="result-section">
         <div id="result-shape"></div>
-        <p class="result-heading"></p>
+        <span class="result-heading"></span>
         <table>
           <tr>
             <td class="property"></td>

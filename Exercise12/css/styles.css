@@ -46,22 +46,27 @@ header ul li{
     font-weight: bold;
 }
 
+li a{
+    color:#000000;
+    text-decoration: none;
+}
 /************************** STYLES FOR HEADER ENDS HERE **************************/
 
 /************************** STYLES FOR SECTIONS STARTS HERE **************************/
 .shape-section,.value-section,.result-section{
-    width: 40%;
+    width: 50%;
     margin: 15% auto;
     text-align: center;
 }
 
 .shapes-container{
+    width:88%;
     display: flex;
     justify-content: space-evenly;
-    margin:14% 0;
+    margin:10% auto;
 }
 
-.shape-section p,.value-section p,.result-section p{
+.shape-section span,.value-section span,.result-section span{
     color: #ffffff;
     font-size: 50px;
     font-weight: 400;
@@ -79,7 +84,7 @@ header ul li{
   border-radius: 50%;
 }
 
-.triangle{
+.triangleContent{
 	width: 0;
 	height: 0;
 	border-left: 85px solid transparent;
@@ -96,16 +101,20 @@ header ul li{
 #tick{
     height: 54px;
     width: 26px;
-    border-bottom: 2.5px solid white;
-    border-right: 2.5px solid white;
+    border-bottom: 2.5px solid #ffffff;
+    border-right: 2.5px solid #ffffff;
     transform: rotateZ(42deg);
     margin: 35px auto 0;
 }
 
-.triangle #tick{
+.triangle{
     position: relative;
+}
+
+.triangle #tick{
+    position: absolute;
     top:30px;
-    right: 16px;
+    left:68px;
 }
 
 .value-section{
@@ -116,7 +125,7 @@ header ul li{
 .input-box{
     border: 2px solid #ffffff;
     background-color: #000;
-    width:720px;
+    width:85%;
     height: 90px;
     margin:56px 0;
     color: #ffffff;
@@ -158,17 +167,13 @@ header ul li{
 }
 
 .result-section div{
-    margin:auto;
-}
-
-.result-section p{
-    margin-top:5%;
+    margin:0 auto 5%;
 }
 
 table {
     color:#ffffff;
     margin:0 auto;
-    width: 68%;
+    width: 54%;
     border-spacing: 0px 20px;
     margin-bottom: 9%;
     text-align: left;
