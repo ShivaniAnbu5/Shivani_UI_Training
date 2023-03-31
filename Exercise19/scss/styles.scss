@@ -1,3 +1,4 @@
+@import "./flex";
 $textColor : #cecece;
 
 *{
@@ -23,12 +24,12 @@ main{
 }
 
 /*********************************** STYLES FOR HEADER ***********************************/
-@mixin flex($jc,$ai,$fd){
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;;
-    flex-direction: $fd;
-}
+// @mixin flex($jc,$ai,$fd){
+//     display: flex;
+//     justify-content: $jc;
+//     align-items: $ai;
+//     flex-direction: $fd;
+// }
 
 @import "./header";
 
@@ -57,14 +58,15 @@ main{
     width: 50%;
     margin: 320px auto 0;
 
-    p{
+    span{
+        display: inline-block;
         border-bottom: 1px solid #ffffff;
     }
-    p:first-child{
+    span:first-child{
         width:40px;
         margin-right: 40px;
     }
-    p:last-child{
+    span:last-child{
         width: 220px;
     }
 }

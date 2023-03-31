@@ -119,14 +119,15 @@ header .designer-details-container p:nth-child(2) span {
   width: 50%;
   margin: 320px auto 0;
 }
-.horizontal-break p {
+.horizontal-break span {
+  display: inline-block;
   border-bottom: 1px solid #ffffff;
 }
-.horizontal-break p:first-child {
+.horizontal-break span:first-child {
   width: 40px;
   margin-right: 40px;
 }
-.horizontal-break p:last-child {
+.horizontal-break span:last-child {
   width: 220px;
 }
 
