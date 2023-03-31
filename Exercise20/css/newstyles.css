@@ -269,4 +269,22 @@ button {
   color: green;
 }
 
+.fa-arrow-left {
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+.fa-arrow-left:hover {
+  cursor: pointer;
+}
+
+.main-header .arrow-title-division {
+  display: flex;
+  align-items: center;
+}
+
+.selected-note-title {
+  color: pink;
+}
+
 /*# sourceMappingURL=newstyles.css.map */

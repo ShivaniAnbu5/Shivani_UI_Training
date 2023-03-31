@@ -23,7 +23,11 @@
   </head>
   <body>
     <header class="main-header">
-      <h1>Pocket <span>Notes</span></h1>
+      <div class="arrow-title-division">
+        <i class="fa-solid fa-arrow-left"></i>
+        <h1>Pocket <span>Notes</span></h1>
+      </div>
+
       <div class="header-buttons-container">
         <button class="delete-particular-note-button">DELETE</button>
         <button class="edit-note-button">EDIT</button>
@@ -31,7 +35,14 @@
     </header>
 
     <main>
-        <div class="selected-note-container">asfdas</div>
+        <div class="selected-note-container">
+          <h1 class="selected-note-title"></h1>
+          <p class="selected-note-date"></p>
+          <div class="selected-note-imgContainer">
+            <img src="" alt="">
+          </div>
+          <p class="selected-note-content"></p>
+        </div>
     </main>
 
     <script
@@ -41,6 +52,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="./js/scripts.js"></script>
+    <script type="module" src="./js/newnote.js"></script>
+
   </body>
 </html>

@@ -21,6 +21,8 @@ const colors = {
     },
 }
 
+var noteIndex = 0;
+
 var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 var date = new Date();
 var todaysDate = months[date.getMonth()]+" "+date.getDate()+", "+date.getFullYear();
@@ -36,8 +38,10 @@ if(localStorage.getItem("Notes") != null){
     $(".empty-page").css("display","none");
     $(".delete-all-button").css("display","inline");
    
-
     returnedNotesArray = JSON.parse(localStorage.getItem("Notes"));
+
+    noteIndex = returnedNotesArray[returnedNotesArray.length-1].noteIndex + 1;
+    console.log("local not index "+noteIndex);
     for(let i=0;i<returnedNotesArray.length;i++){
     let inputNotesTitle = returnedNotesArray[i].notesTitle;
     let inputImageUrl = returnedNotesArray[i].imageUrl;
@@ -48,7 +52,7 @@ if(localStorage.getItem("Notes") != null){
     noteContainer.css("background-color",returnedNotesArray[i].noteBgColor);
 
     let note = $("<div>");
-    note.attr("class","note");
+    note.attr("class","note "+returnedNotesArray[i].noteIndex);
 
     let noteTitle = $("<h1>");
     noteTitle.attr("class","note-title");
@@ -166,7 +170,7 @@ $(".add-button").click(()=>{
         noteContainer.css("background-color",colors[noteColor].color);
 
         let note = $("<div>");
-        note.attr("class","note");
+        note.attr("class","note "+noteIndex);
 
         let noteTitle = $("<h1>");
         noteTitle.attr("class","note-title");
@@ -192,6 +196,8 @@ $(".add-button").click(()=>{
         noteContent.attr("class","note-content");
         noteContent.text(inputNotesContent);
 
+        
+
         note.append(noteContent);
         noteContainer.append(note);
         allNotesContainer.prepend(noteContainer);
@@ -208,19 +214,24 @@ $(".add-button").click(()=>{
             imageUrl : "",
             notesContent : "",
             noteBgColor : "",
-            noteColor: ""
+            noteColor: "",
+            noteIndex : ""
         }
 
+        console.log("Note index before: "+noteIndex);
         noteObject.notesTitle = inputNotesTitle;
         noteObject.noteDate = todaysDate;
         noteObject.imageUrl = inputImageUrl;
         noteObject.notesContent = inputNotesContent;
         noteObject.noteBgColor = colors[noteColor].color;
         noteObject.noteColor = noteColor;
+        noteObject.noteIndex = noteIndex++;
 
+        console.log("Note index currently: "+noteIndex);
         notesArray.push(noteObject);
 
         localStorage.setItem("Notes",JSON.stringify(notesArray));
+        returnedNotesArray = JSON.parse(localStorage.getItem("Notes"));
 
         selectedColor.empty();
     }
@@ -265,20 +276,26 @@ $(".delete-all-button").click(()=>{
     })
 })
 
-$(".delete-modal-button").click(()=>{
+$(".delete-conf-button").click(()=>{
     $(".all-notes-container").empty();
     $(".empty-page").css("display","block");
     $(".delete-all-button").css("display","none");
     $(".overlay").css("display","none");
     $(".delete-note-modal").css("display","none");
+    noteIndex = 0;
     localStorage.clear();
     notesArray = new Array();
 })
 
-$(".note-container").click(()=>{
+var selectedNoteIndex;
+$(".all-notes-container").click((event)=>{
+
+    selectedNoteIndex = parseInt((event.target.className).split(" ")[1]);
+    
+    localStorage.setItem("selectedNoteIndex",selectedNoteIndex);
+
+
     window.location.href='note.html';
+
 })
 
-$(".selected-note-container").click(()=>{
-    $(".selected-note-container").css("background-color", "gray");
-})
