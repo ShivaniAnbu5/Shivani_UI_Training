@@ -180,11 +180,13 @@ $(".add-button").click(()=>{
     let inputImageUrl = $('textarea[name="imageUrl"]').val();
     let inputNotesContent = $('textarea[name="content"]').val();
 
-    if(inputNotesTitle=="" || inputNotesContent==""){
+    if(inputNotesTitle=="" || inputNotesContent=="" || inputNotesTitle.length>100){
         if(inputNotesTitle=="")
         $(".error-title").text("Please enter the title before adding");
         if(inputNotesContent=="")
         $(".error-content").text("Please enter the content before adding");
+        if(inputNotesTitle.length>100)
+        $(".error-title").text("Title length should be less than 100");
     }
     else{
         $(".error").text("");
@@ -284,6 +286,8 @@ $('textarea[name="notesTitle"]').keyup(()=>{
         $(".add-button").removeClass("add-button-enabled");
         $(".add-button").addClass("add-button-style");
     }
+    if(($('textarea[name="notesTitle"]').val().length)>100)
+        $(".error-title").text("Title length should be less than 100");
 
 })
 

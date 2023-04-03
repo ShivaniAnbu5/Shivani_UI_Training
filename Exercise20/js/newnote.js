@@ -86,22 +86,22 @@ $(".edit-note-button").click(()=>{
    let inputImageUrl = returnedNotesArray[selectedNoteIndex].imageUrl;
    let inputNotesContent = returnedNotesArray[selectedNoteIndex].notesContent;
 
-   $('textarea[name="notesTitle"]').val(inputNotesTitle);
+   $('textarea[name="SnotesTitle"]').val(inputNotesTitle);
    $('textarea[name="imageUrl"]').val(inputImageUrl);
-   $('textarea[name="content"]').val(inputNotesContent);
+   $('textarea[name="Scontent"]').val(inputNotesContent);
 
    $(".save-button").addClass("save-button-enabled");
     $(".save-button").removeClass("save-button-style");
 
 })
 
-$('textarea[name="notesTitle"]').keyup(()=>{
+$('textarea[name="SnotesTitle"]').keyup(()=>{
     $(".error-title").text("");
-    if($('textarea[name="content"]').val() != ""){
+    if($('textarea[name="Scontent"]').val() != ""){
         $(".save-button").addClass("save-button-enabled");
         $(".save-button").removeClass("save-button-style");
     }
-    if($('textarea[name="notesTitle"]').val() == ""){
+    if($('textarea[name="SnotesTitle"]').val() == ""){
         $(".error-title").text("Please enter the title before saving");
         $(".save-button").removeClass("save-button-enabled");
         $(".save-button").addClass("save-button-style");
@@ -109,13 +109,13 @@ $('textarea[name="notesTitle"]').keyup(()=>{
 
 })
 
-$('textarea[name="content"]').keyup(()=>{
+$('textarea[name="Scontent"]').keyup(()=>{
     $(".error-content").text("");
-    if($('textarea[name="notesTitle"]').val() != ""){
+    if($('textarea[name="SnotesTitle"]').val() != ""){
         $(".save-button").addClass("save-button-enabled");
         $(".save-button").removeClass("save-button-style");
     }
-    if($('textarea[name="content"]').val() == ""){
+    if($('textarea[name="Scontent"]').val() == ""){
         $(".error-content").text("Please enter the content before saving");
         $(".save-button").removeClass("save-button-enabled");
         $(".save-button").addClass("save-button-style");
@@ -137,6 +137,10 @@ $(".save-button").click(()=>{
     console.log($('textarea[name="content"]').val());
     returnedNotesArray[selectedNoteIndex].noteBgColor = colors[noteColor].color;
     returnedNotesArray[selectedNoteIndex].noteColor = noteColor;
+
+    // let editedNote = returnedNotesArray[selectedNoteIndex];
+    // returnedNotesArray.splice(selectedNoteIndex,1);
+    // returnedNotesArray.unshift(editedNote);
 
     localStorage.setItem("Notes",JSON.stringify(returnedNotesArray));
     $(".edit-note-modal-container").css("display","none"); 
