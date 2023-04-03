@@ -1,5 +1,56 @@
+.note-main{
+    display: flex;
+    // background-color: green;
+    width: 55%;
+    margin: 40px 0 40px 20.5%;
+    justify-content: space-evenly;
+}
+
+.color-container{
+    // background-color: yellow;
+    .selected-note-circle {
+        @extend .cursor-pointer;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        display: inline-block;
+        margin:0 4px;
+      }
+    }
 .selected-note-container{
-    color: green;
+    // background-color: palevioletred;
+    color: white;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    // background-color: pink;
+}
+
+.selected-note-title{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.selected-note-date{
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(205, 205, 205);
+}
+
+.selected-note-imgContainer{
+    margin: 30px 0px 20px;
+    img{
+        width: 100%;
+        border-radius: 16px;
+    }
+}
+
+.selected-note-content{
+    line-height: 30px;
+    font-size: 19px;
+    font-weight: 300;
 }
 
 .fa-arrow-left{
@@ -16,6 +67,3 @@
     align-items: center;
 }
 
-.selected-note-title{
-    color: pink;
-}

@@ -30,63 +30,86 @@ var todaysDate = months[date.getMonth()]+" "+date.getDate()+", "+date.getFullYea
 var noteColor;
 
 var notesArray = new Array();
-var returnedNotesArray;
-
+var returnedNotesArray,isRemoved,removedNoteIndex;
 let allNotesContainer = $(".all-notes-container");
 
 if(localStorage.getItem("Notes") != null){
     $(".empty-page").css("display","none");
     $(".delete-all-button").css("display","inline");
-   
+
     returnedNotesArray = JSON.parse(localStorage.getItem("Notes"));
+    // console.log("After removing,array is "+returnedNotesArray);
 
-    noteIndex = returnedNotesArray[returnedNotesArray.length-1].noteIndex + 1;
-    console.log("local not index "+noteIndex);
-    for(let i=0;i<returnedNotesArray.length;i++){
-    let inputNotesTitle = returnedNotesArray[i].notesTitle;
-    let inputImageUrl = returnedNotesArray[i].imageUrl;
-    let inputNotesContent = returnedNotesArray[i].notesContent;
-
-    let noteContainer = $("<div>");
-    noteContainer.attr("class","note-container");
-    noteContainer.css("background-color",returnedNotesArray[i].noteBgColor);
-
-    let note = $("<div>");
-    note.attr("class","note "+returnedNotesArray[i].noteIndex);
-
-    let noteTitle = $("<h1>");
-    noteTitle.attr("class","note-title");
-    noteTitle.text(inputNotesTitle);
-
-    let noteDate = $("<p>");
-    noteDate.attr("class","note-date");
-    noteDate.text(returnedNotesArray[i].noteDate);
-
-    note.append(noteTitle,noteDate);
-    if($('textarea[name="imageUrl"]').val() != ""){
-        let noteImageContainer = $("<div>");
-        noteImageContainer.attr("class","note-image-container");
-        let noteImage = $("<img>");
-        noteImage.attr("alt","An image describing the note");
-        noteImage.attr("src",inputImageUrl);
-        noteImageContainer.append(noteImage);
-        note.append(noteImageContainer);
+    if(localStorage.getItem("isRemoved") != null){
+        isRemoved = localStorage.getItem("isRemoved");
+        removedNoteIndex = localStorage.getItem("removedNoteIndex");
+        // console.log("Inside if noteIndex "+noteIndex);
     }
-
-
-    let noteContent = $("<p>");
-    noteContent.attr("class","note-content");
-    noteContent.text(inputNotesContent);
-
-    note.append(noteContent);
-    noteContainer.append(note);
-    allNotesContainer.prepend(noteContainer);
-
-    // On reload, this notes array will again be newly created.So getting the values and storing them again at first
-    notesArray[i] = returnedNotesArray[i];
-    }
-
+    else isRemoved = false;
     
+    // console.log("isRemoved :"+isRemoved);
+    
+    // console.log("local note index "+noteIndex);
+    for(let i=0;i<returnedNotesArray.length;i++){
+        let inputNotesTitle = returnedNotesArray[i].notesTitle;
+        let inputImageUrl = returnedNotesArray[i].imageUrl;
+        let inputNotesContent = returnedNotesArray[i].notesContent;
+
+        let noteContainer = $("<div>");
+        noteContainer.attr("class","note-container");
+        noteContainer.css("background-color",returnedNotesArray[i].noteBgColor);
+
+        let note = $("<div>");
+        if(isRemoved && returnedNotesArray[i].noteIndex>removedNoteIndex){
+            // console.log("isRemoved inside if "+isRemoved);
+            // console.log("removedNoteIndex inside if "+removedNoteIndex);
+            // console.log("minus index");
+            returnedNotesArray[i].noteIndex -= 1;
+            note.attr("class","note "+ (returnedNotesArray[i].noteIndex));   
+        }
+        else{
+            note.attr("class","note "+returnedNotesArray[i].noteIndex);
+        }
+        
+
+        let noteTitle = $("<h1>");
+        noteTitle.attr("class","note-title");
+        noteTitle.text(inputNotesTitle);
+
+        let noteDate = $("<p>");
+        noteDate.attr("class","note-date");
+        noteDate.text(returnedNotesArray[i].noteDate);
+
+        note.append(noteTitle,noteDate);
+        if($('textarea[name="imageUrl"]').val() != ""){
+            let noteImageContainer = $("<div>");
+            noteImageContainer.attr("class","note-image-container");
+            let noteImage = $("<img>");
+            noteImage.attr("alt","An image describing the note");
+            noteImage.attr("src",inputImageUrl);
+            noteImageContainer.append(noteImage);
+            note.append(noteImageContainer);
+        }
+
+
+        let noteContent = $("<p>");
+        noteContent.attr("class","note-content");
+        noteContent.text(inputNotesContent);
+
+        note.append(noteContent);
+        noteContainer.append(note);
+        allNotesContainer.prepend(noteContainer);
+
+        // On reload, this notes array will again be newly created.So getting the values and storing them again at first
+        notesArray[i] = returnedNotesArray[i];
+    }
+    if(isRemoved){
+        localStorage.setItem("Notes",JSON.stringify(returnedNotesArray));
+        localStorage.setItem("isRemoved",false);
+        localStorage.setItem("removedNoteIndex",Number.MAX_VALUE);
+    }
+    noteIndex = returnedNotesArray[returnedNotesArray.length-1].noteIndex + 1;
+   
 }
 
 var selectedColor;
@@ -170,6 +193,7 @@ $(".add-button").click(()=>{
         noteContainer.css("background-color",colors[noteColor].color);
 
         let note = $("<div>");
+        console.log("Note index "+noteIndex);
         note.attr("class","note "+noteIndex);
 
         let noteTitle = $("<h1>");
@@ -234,6 +258,17 @@ $(".add-button").click(()=>{
         returnedNotesArray = JSON.parse(localStorage.getItem("Notes"));
 
         selectedColor.empty();
+
+        $(".note").click((event)=>{
+
+            selectedNoteIndex = parseInt((event.currentTarget.className).split(" ")[1]);
+            
+            localStorage.setItem("selectedNoteIndex",selectedNoteIndex);
+        
+            window.location.href='note.html';
+        
+        })
+        
     }
 
 })
@@ -288,12 +323,11 @@ $(".delete-conf-button").click(()=>{
 })
 
 var selectedNoteIndex;
-$(".all-notes-container").click((event)=>{
+$(".note").click((event)=>{
 
-    selectedNoteIndex = parseInt((event.target.className).split(" ")[1]);
+    selectedNoteIndex = parseInt((event.currentTarget.className).split(" ")[1]);
     
     localStorage.setItem("selectedNoteIndex",selectedNoteIndex);
-
 
     window.location.href='note.html';
 

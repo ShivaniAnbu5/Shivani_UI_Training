@@ -34,16 +34,66 @@
       </div>
     </header>
 
-    <main>
+    <main class="note-main">
+        <div class="color-container">
+          <span class="selected-note-circle"></span>
+        </div>
         <div class="selected-note-container">
           <h1 class="selected-note-title"></h1>
           <p class="selected-note-date"></p>
           <div class="selected-note-imgContainer">
-            <img src="" alt="">
+            <img alt="Image" class="selected-note-image">
           </div>
           <p class="selected-note-content"></p>
         </div>
+
+
+        <div class="edit-note-modal-container">
+          <div class="edit-note-modal">
+              <header>
+                  <p>EDIT NOTE</p>
+                  <div class="close-icon-container"> <i class="fa-solid fa-xmark close-icon edit-note-close-icon"></i></div>
+              </header>
+
+              <form action="">
+                  <textarea name="notesTitle" id="" placeholder="Notes Title" rows="2"></textarea>
+                  <p class="error error-title"></p>
+                  <textarea name="imageUrl" id="" rows="2" placeholder="Add Image URL"></textarea>
+                  <textarea name="content" id="" rows="32" placeholder="Add Content Here"></textarea>
+                  <p class="error error-content"></p>
+              </form>
+              
+              <div class="colors-button-container">
+                  <div class="colors-container">
+                      <span class="circle purple"></span>
+                      <span class="circle white"></span>
+                      <span class="circle yellow"></span>
+                      <span class="circle green"></span>
+                      <span class="circle red"></span>
+                  </div>
+                  
+                  <button class="save-button save-button-style">SAVE</button>
+              </div>
+              
+          </div>
+      </div>
+
+
+      <div class="overlay"></div>
+
+    <div class="delete-note-modal">
+      <header >
+          <p>CONFIRM DELETE</p>
+          <div class="close-icon-container"> <i class="fa-solid fa-xmark close-icon delete-note-close-icon"></i></div>
+      </header>
+      <p class="delete-confirmation-msg"></p>
+
+      <button class="confirmation-button delete-conf-button selected-note-delete-conf-button">
+        <span>YES, DELETE</span> </button>
+  </div>
     </main>
+
+    
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
